@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(13, 26, 46);
+  color: #edf0f1;
+}
+
+/*Nav bar stuff
+li,
+a,
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+  background-color: rgb(13, 26, 46);
+}
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 5%;
+  background-color: #010111;
+}
+
+.logo {
+  cursor: pointer;
+  margin-right: auto;
+  width: 4rem;
+  height: 4 rem;
+  background-color: #010111;
+}
+.logoTitle {
+  margin-right: auto;
+  background-color: #010111;
+}
+.nav_links {
+  list-style: none;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+.nav_links li a {
+  transition: all 0.3s ease;
+}
+.nav_links li a:hover {
+  color: #0088a9;
+}
+button {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+*/
+/*Second nav bar stuff*/
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  width: 50%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+}
+.nav-links li a {
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/*When stuff gets weird*/
+
+.line {
+  width: 30px;
+  height: 3px;
+  background: white;
+  margin: 5px;
+}
+
+.hamburger {
+  position: fixed;
+  cursor: pointer;
+  right: 5%;
+  top: 5%;
+  transform: translate(-5%, -50%);
+  z-index: 2;
+}
+
+.nav-links {
+  position: fixed;
+  background: rgb(13, 26, 46);
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  clip-path: circle(80px at 90% -10%);
+  -webkit-clip-path: circle(80px at 90% -10%);
+  transition: all 1s ease-out;
+  pointer-events: none;
+}
+.nav-links.open {
+  clip-path: circle(2100px at 90% -10%);
+  -webkit-clip-path: circle(2100px at 90% -10%);
+  pointer-events: all;
+}
+.nav-links li {
+  opacity: 0;
+}
+.nav-links li a {
+  font-size: 25px;
+}
+.nav-links li:nth-child(1) {
+  transition: all 1.5s ease 0.2s;
+}
+.nav-links li:nth-child(2) {
+  transition: all 1.5s ease 0.4s;
+}
+.nav-links li:nth-child(3) {
+  transition: all 1.5s ease 0.6s;
+}
+li.fade {
+  opacity: 1;
+}
+
+/*Main page stuff*/
+
+section {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 60px;
+  background: #1c395d;
+  padding: 8px 24px;
+  border-radius: 16px;
+}
+
+section:nth-child(2) {
+  background-image: url(images/starrySky.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+section:nth-child(3) {
+  background: rgb(13, 26, 46);
+}
+
+section:nth-child(4) {
+  background-image: url(images/starrySky.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+section:nth-child(5) {
+  background-color: rgb(13, 26, 46);
+}
