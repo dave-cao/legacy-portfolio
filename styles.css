@@ -29,6 +29,7 @@ header {
   height: 7%;
   top: 0px;
   background-color: rgb(13, 26, 46);
+  border-bottom: black solid 3px;
   z-index: 3;
 }
 
@@ -61,7 +62,6 @@ header {
 #cta {
   background-color: rgb(13, 26, 46);
 }
-
 button {
   padding: 9px 25px;
   background-color: rgba(0, 136, 169, 1);
