@@ -31,7 +31,7 @@ header {
   background-color: rgb(13, 26, 46);
   border-bottom: black solid 3px;
   z-index: 3;
-  visibility: hidden;
+  display: none;
 }
 
 .logo {
