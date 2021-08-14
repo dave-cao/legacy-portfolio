@@ -31,6 +31,7 @@ header {
   background-color: rgb(13, 26, 46);
   border-bottom: black solid 3px;
   z-index: 3;
+  visibility: hidden;
 }
 
 .logo {
@@ -213,30 +214,176 @@ section {
 
 h2 {
   font-size: 60px;
-  background: rgb(13, 26, 46, 0.7);
+  /* background: rgb(13, 26, 46, 0.7); */
   padding: 8px 24px;
   border-radius: 16px;
   text-align: center;
 }
 
-.emphasis {
-  color: #0096ff;
-  background: rgb(13, 26, 46, 0);
-  font-style: italic;
-}
-#name {
-  background: #1c395d;
-}
-
+/*start if page 1*/
 section:nth-child(2) {
   font-size: 5px;
-  background-image: url(images/starrySky.jpg);
+  /* background-image: url(images/starrySky.jpg); */
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   height: 100vh;
   width: 100%;
 }
+
+@keyframes emphasis {
+  0% {
+    right: 0px;
+    bottom: 0px;
+  }
+  25% {
+    right: 1500px;
+    bottom: 0px;
+  }
+  50% {
+    right: 200px;
+    bottom: 200px;
+  }
+  75% {
+    right: 0px;
+    bottom: 200px;
+    color: white;
+  }
+  100% {
+    right: 0px;
+    bottom: 0px;
+    color: #0096ff;
+    visibility: visible;
+  }
+}
+@keyframes firstWord {
+  0% {
+    color: black;
+    bottom: 200px;
+    left: 440px;
+  }
+  5% {
+  }
+  25% {
+    color: white;
+  }
+  50% {
+    bottom: 200px;
+    left: 440px;
+  }
+  75% {
+  }
+  100% {
+    color: white;
+    bottom: 0px;
+    left: 0px;
+  }
+}
+@keyframes introSentence {
+  0% {
+  }
+  25% {
+  }
+  50% {
+  }
+  75% {
+    color: black;
+  }
+  100% {
+    color: white;
+  }
+}
+@keyframes emphasis {
+  0% {
+  }
+  25% {
+  }
+  50% {
+  }
+  75% {
+    color: black;
+  }
+  100% {
+    color: red;
+  }
+}
+
+@keyframes heroTag {
+  0% {
+    color: black;
+  }
+  25% {
+  }
+  50% {
+  }
+  75% {
+  }
+  100% {
+    color: blue;
+  }
+}
+
+#firstWord {
+  color: black;
+  position: relative;
+  bottom: 200px;
+  left: 440px;
+  animation: firstWord 5s ease-in-out 2s forwards;
+}
+#introSentence {
+  color: black;
+  animation: introSentence 9.5s linear forwards;
+}
+.emphasis {
+  color: black;
+  animation: emphasis 9.7s linear forwards;
+}
+
+#heroTag {
+  color: black;
+  cursor: pointer;
+  transition: 1s linear;
+}
+#heroTag:hover {
+  color: blue;
+  transition: 1s linear;
+}
+
+.quotes {
+  color: black;
+  position: absolute;
+  cursor: pointer;
+  transition: 1s linear;
+}
+.quotes:hover {
+  color: blue;
+  transition: 1s linear;
+}
+#quote1 {
+  top: 200px;
+  left: 250px;
+}
+#quote2 {
+  top: 280px;
+  right: 250px;
+}
+#quote3 {
+  bottom: 100px;
+  right: 200px;
+}
+#quote4 {
+  bottom: 270px;
+  left: 150px;
+}
+#quote5 {
+  bottom: 270px;
+  right: 100px;
+}
+#quote6 {
+  top: 90px;
+  right: 100px;
+}
+/*end of page 1*/
 
 section:nth-child(3) {
   background-color: rgb(13, 26, 46);
@@ -253,8 +400,6 @@ section:nth-child(4) {
   background-image: url(images/sillouhetteWalk.jpg);
   background-size: cover;
   background-attachment: fixed;
-  /* filter: blur(8px);
-  -webkit-filter: blur(8px); */
   height: 100vh;
   width: 100%;
 }
@@ -280,7 +425,7 @@ section:nth-child(5) h2 {
 }
 
 section:nth-child(6) {
-  background-image: url(images/starrySky.jpg);
+  /* background-image: url(images/starrySky.jpg); */
   background-attachment: fixed;
   background-size: cover;
   background-position: center;

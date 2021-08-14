@@ -9,3 +9,12 @@ hamburger.addEventListener('click', () => {
         link.classList.toggle('fade');
     })
 })
+
+const navButton = document.querySelector(".navButton");
+
+navButton.addEventListener("click", () => {
+    alert("My info is on the bottom of the screen!")
+})
+
+
+
