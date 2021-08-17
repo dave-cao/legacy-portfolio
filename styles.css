@@ -278,6 +278,20 @@ h2 {
   border-radius: 16px;
   text-align: center;
 }
+@keyframes firstPageBackground {
+  0% {
+  }
+  5% {
+  }
+  25% {
+  }
+  50% {
+  }
+  75% {
+  }
+  100% {
+  }
+}
 
 /*start if page 1*/
 section:nth-child(2) {
@@ -288,6 +302,7 @@ section:nth-child(2) {
   background-position: center;
   height: 100vh;
   width: 100%;
+  animation: firstPageBackground 5s linear 5s;
 }
 @keyframes firstWord {
   0% {
@@ -314,6 +329,7 @@ section:nth-child(2) {
 }
 @keyframes introSentence {
   0% {
+    color: var(--mainBGC);
   }
   25% {
   }
@@ -328,6 +344,7 @@ section:nth-child(2) {
 }
 @keyframes emphasis {
   0% {
+    color: var(--mainBGC);
   }
   25% {
   }
