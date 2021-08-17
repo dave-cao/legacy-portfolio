@@ -8,7 +8,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: #f5f5f5;
+  color: var(--mainBGC);
   background: var(--mainBGC);
   scroll-behavior: smooth;
   font-family: "Montserrat", sans-serif;
