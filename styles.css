@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
+:root {
+  --mainBGC: #0e0e0e;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   color: #f5f5f5;
-  background: black;
+  background: var(--mainBGC);
   scroll-behavior: smooth;
 }
 
@@ -24,56 +28,112 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 30px 10%;
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 7%;
   top: 0px;
-  background-color: rgb(13, 26, 46);
-  border-bottom: black solid 3px;
+  border-bottom: #824800 solid 3px;
   z-index: 3;
-  display: none;
+  animation: navBorder 10s linear;
 }
 
 .logo {
-  width: 3rem;
-  height: 3rem;
+  width: 0rem;
+  height: 0rem;
   cursor: pointer;
-  background-color: rgb(13, 26, 46);
+  background-color: var(--mainBGC);
 }
 
 .nav_links {
   list-style: none;
-  background-color: rgb(13, 26, 46);
+  background-color: #824800;
+  animation: navButtonLinks 10s linear;
 }
 
 .nav_links li {
   display: inline-block;
   padding: 0px 20px;
-  background-color: rgb(13, 26, 46);
+  background-color: var(--mainBGC);
+}
+
+@keyframes navAnimation {
+  0% {
+    color: var(--mainBGC);
+  }
+  5% {
+  }
+  25% {
+  }
+  50% {
+  }
+  85% {
+    color: var(--mainBGC);
+  }
+  100% {
+    color: white;
+  }
+}
+@keyframes navBorder {
+  0% {
+    border-bottom: var(--mainBGC) solid 3px;
+  }
+  5% {
+  }
+  25% {
+  }
+  50% {
+  }
+  85% {
+    border-bottom: var(--mainBGC) solid 3px;
+  }
+  100% {
+    border-bottom: #824800 solid 3px;
+  }
+}
+@keyframes navButtonLinks {
+  0% {
+    background-color: var(--mainBGC);
+  }
+  5% {
+  }
+  25% {
+  }
+  50% {
+  }
+  85% {
+    background-color: var(--mainBGC);
+  }
+  100% {
+    background-color: #824800;
+  }
 }
 
 .nav_links li a {
   transition: all 0.3s ease 0s;
-  background-color: rgb(13, 26, 46);
+  animation: navAnimation 10s linear;
 }
 
 .nav_links li a:hover {
-  color: blue;
+  color: orange;
 }
 #cta {
-  background-color: rgb(13, 26, 46);
+  position: sticky !important;
+  top: 0;
 }
 button {
   padding: 9px 25px;
-  background-color: rgba(0, 136, 169, 1);
+  background-color: #824800;
   border: none;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
+  animation: navButtonLinks 10s linear, navAnimation 10s linear;
+  position: relative;
+  top: 0;
 }
 
 button:hover {
-  background-color: rgba(0, 136, 169, 0.8);
+  background-color: #683a00;
 }
 
 /*nav bar stuff*/
@@ -230,35 +290,9 @@ section:nth-child(2) {
   height: 100vh;
   width: 100%;
 }
-
-@keyframes emphasis {
-  0% {
-    right: 0px;
-    bottom: 0px;
-  }
-  25% {
-    right: 1500px;
-    bottom: 0px;
-  }
-  50% {
-    right: 200px;
-    bottom: 200px;
-  }
-  75% {
-    right: 0px;
-    bottom: 200px;
-    color: white;
-  }
-  100% {
-    right: 0px;
-    bottom: 0px;
-    color: #0096ff;
-    visibility: visible;
-  }
-}
 @keyframes firstWord {
   0% {
-    color: black;
+    color: var(--mainBGC);
     bottom: 200px;
     left: 440px;
   }
@@ -287,7 +321,7 @@ section:nth-child(2) {
   50% {
   }
   75% {
-    color: black;
+    color: var(--mainBGC);
   }
   100% {
     color: white;
@@ -301,63 +335,49 @@ section:nth-child(2) {
   50% {
   }
   75% {
-    color: black;
+    color: var(--mainBGC);
   }
   100% {
-    color: red;
-  }
-}
-
-@keyframes heroTag {
-  0% {
-    color: black;
-  }
-  25% {
-  }
-  50% {
-  }
-  75% {
-  }
-  100% {
-    color: blue;
+    color: orange;
   }
 }
 
 #firstWord {
-  color: black;
+  color: var(--mainBGC);
   position: relative;
   bottom: 200px;
   left: 440px;
   animation: firstWord 5s ease-in-out 2s forwards;
+  z-index: 2;
 }
 #introSentence {
-  color: black;
+  color: var(--mainBGC);
   animation: introSentence 9.5s linear forwards;
 }
 .emphasis {
-  color: black;
+  color: var(--mainBGC);
   animation: emphasis 9.7s linear forwards;
 }
 
 #heroTag {
-  color: black;
+  color: var(--mainBGC);
   cursor: pointer;
-  transition: 1s linear;
+  transition: 0.5s linear;
 }
 #heroTag:hover {
-  color: blue;
-  transition: 1s linear;
+  color: orange;
+  transition: 0.5s linear;
 }
 
 .quotes {
-  color: black;
+  color: var(--mainBGC);
   position: absolute;
   cursor: pointer;
-  transition: 1s linear;
+  transition: 0.5s linear;
 }
 .quotes:hover {
-  color: blue;
-  transition: 1s linear;
+  color: #824800;
+  transition: 0.5s linear;
 }
 #quote1 {
   top: 200px;
