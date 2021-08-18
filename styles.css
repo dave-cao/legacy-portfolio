@@ -489,7 +489,7 @@ section:nth-child(6) {
 }
 
 /*Small devices Ipad*/
-@media screen and (max-width: 873px) {
+@media screen and (max-width: 890px) {
   header {
     display: none;
   }
@@ -504,9 +504,6 @@ section:nth-child(6) {
 
 /*Very small devices*/
 @media screen and (max-width: 500px) {
-  header {
-    display: none;
-  }
   @keyframes firstWord {
     0% {
       color: var(--mainBGC);
