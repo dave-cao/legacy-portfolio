@@ -12,6 +12,7 @@
   overflow-x: hidden;
   outline: black;
   text-decoration: none;
+  font-family: "Nanum Myeongjo";
 }
 
 /* base styles */
@@ -67,6 +68,36 @@ li a:hover {
   background-color: #90713f;
 }
 
+/* fonts */
+@font-face {
+  font-family: "Nanum Myeongjo";
+  src: url(/Assets/Fonts/NanumMyeongjo-Regular.ttf);
+}
+
+/* Mobile styles */
+.navBar {
+  display: none;
+}
+
+@keyframes name {
+  0% {
+    transform: translate(0em, 0em);
+  }
+  25% {
+  }
+  50% {
+  }
+  75% {
+    transform: translate(1.5em, 8em);
+    opacity: 1;
+    font-size: 2em;
+  }
+  100% {
+    transform: translate(1.5em, 8em);
+    opacity: 0;
+    font-size: 2em;
+  }
+}
 .name {
   position: absolute;
   color: var(--primary);
@@ -74,13 +105,34 @@ li a:hover {
   border-bottom: #90713f solid 2px;
   font-size: 1em;
   margin: 20px 20px;
+  animation: name 5s ease-in-out reverse;
 }
 
-/* fonts */
+section:nth-child(3) {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-/* Mobile styles */
-.navBar {
-  display: none;
+@keyframes myTitles {
+  100% {
+    opacity: 1;
+  }
+}
+.myTitles {
+  position: absolute;
+  font-weight: bold;
+  opacity: 0;
+  animation: myTitles 1.5s ease-in 5s forwards;
+}
+@keyframes myTitlesFL {
+  100% {
+    color: var(--primary);
+  }
+}
+.myTitlesFL {
+  animation: myTitlesFL 2s ease-in 6s forwards;
 }
 
 /* small tablet sizes */
@@ -96,16 +148,6 @@ li a:hover {
 }
 
 /*Testing*/
-section:nth-child(3) {
-  font-size: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-section:nth-child(3) p {
-  position: absolute;
-  display: flex;
-}
 
 .heroBanner {
   object-fit: cover;
