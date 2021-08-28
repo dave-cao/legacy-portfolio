@@ -1,7 +1,10 @@
 /*Variable*/
 :root {
-  --primary: #ab874b;
-  --secondary: white;
+  --primary: #EBCB8B;
+  --secondary: #2E3440;
+  --third: #F8F0E3;
+  --fourth: #ab874b;
+  
 }
 
 /* reset */
@@ -13,6 +16,11 @@
   outline: black;
   text-decoration: none;
   font-family: "Nanum Myeongjo";
+}
+html {
+  position: relative;
+  background-color: var(--secondary);
+  color: var(--third);
 }
 
 /* base styles */
@@ -79,6 +87,7 @@ li a:hover {
   display: none;
 }
 
+/*First Page*/
 @keyframes name {
   0% {
     transform: translate(0em, 0em);
@@ -113,6 +122,21 @@ section:nth-child(3) {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
+  width: 100vw;
+  height: 100vh;
+}
+.firstPageBackground {
+  position: fixed;
+  max-width: 100%;
+  width: 100vw;
+  height: 100vh;
+  background: url(images/heroBanner.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position-x: center;
+  opacity: 0.3;
+  z-index: -1;
 }
 
 @keyframes myTitles {
@@ -135,6 +159,33 @@ section:nth-child(3) {
   animation: myTitlesFL 2s ease-in 6s forwards;
 }
 
+/*Second Page*/
+.aboutMePage {
+  max-width: 100%;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--secondary);
+  z-index: -1;
+  padding: 20px 15px;
+  
+}
+.aboutMePage h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: var(--primary);
+}
+.aboutMePage img {
+  display: block;
+  margin: auto;
+  filter: drop-shadow(5px 5px 20px black);
+}
+.aboutMePage h4 {
+  margin: 30px 0px 15px 0px;
+  color: var(--primary);
+}
+
+
+
 /* small tablet sizes */
 @media screen and (min-width: 620px) {
 }
@@ -149,20 +200,13 @@ section:nth-child(3) {
 
 /*Testing*/
 
-.heroBanner {
-  object-fit: cover;
-  max-width: 100%;
-  width: 100vw;
-  height: 100vh;
-  opacity: 0.3;
-  z-index: -1;
-}
+
 img {
   max-width: 100%;
   height: 50vh;
 }
 
 .divider {
-  background-color: silver;
-  height: 3vh;
+  background-color: var(--fourth);
+  height: 1.5px;
 }
