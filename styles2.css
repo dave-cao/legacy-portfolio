@@ -77,13 +77,7 @@ li a:hover {
 }
 
 .bold {
-  font-weight: bold;
   color: var(--primary);
-}
-
-p {
-  line-height: 1.8;
-  text-indent: 20px;
 }
 
 /* fonts */
@@ -192,6 +186,11 @@ section:nth-child(3) {
 .aboutMePage h4 {
   margin: 30px 0px 15px 0px;
   color: var(--primary);
+}
+
+.aboutMePage p {
+  line-height: 1.8;
+  text-indent: 20px;
 }
 
 /*Third Page*/
