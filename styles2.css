@@ -12,15 +12,14 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
   outline: black;
-  text-decoration: none;
   font-family: "Nanum Myeongjo";
 }
 html {
   position: relative;
   background-color: var(--secondary);
   color: var(--third);
+  
 }
 
 /* base styles */
@@ -164,10 +163,11 @@ section:nth-child(3) {
 }
 
 /*Second Page*/
+/*About Me*/
 .aboutMePage {
   max-width: 100%;
   width: 100vw;
-  height: 100vh;
+  height: auto;
   background-color: var(--secondary);
   z-index: -1;
   padding: 20px 25px;
@@ -192,6 +192,37 @@ section:nth-child(3) {
   line-height: 1.8;
   text-indent: 20px;
 }
+
+/*Skills*/
+.skills div:nth-child(1) {
+  grid-column: 1/9;
+  
+}
+.skills div:nth-child(2) {
+  grid-column: 1/9;
+ 
+}
+.skills div:nth-child(3) {
+  grid-column: 1/9;
+  
+}
+.skills div:nth-child(4) {
+  grid-column: 1/9;
+}
+.skills h4 {
+  font-weight: bold;
+  
+}
+
+.skills ul li {
+  margin-left: 30px;
+  line-height: 1.8;
+}
+
+
+
+
+
 
 /*Third Page*/
 
