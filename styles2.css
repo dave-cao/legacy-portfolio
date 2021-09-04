@@ -36,6 +36,10 @@ li a {
 li a:hover {
   color: var(--primary);
 }
+a {
+  text-decoration: none;
+  color: var(--third)
+}
 
 .nav_links_container {
   grid-column: 3/7;
@@ -233,20 +237,24 @@ section:nth-child(3) {
   gap: 25px;
   justify-self: center;
   align-items: center;
-  
+ 
 }
+
+
+
+
 .projects img {
   border: var(--fourth) solid 1.5px;
   transition: linear 0.2s;
 }
 .projects div {
   box-shadow: 5px 5px 20px black;
+  transition: linear 0.1s;
+  cursor: pointer;
 }
-
-.projects img:hover {
+.projects div:hover {
   opacity: 0.5;
 }
-
 
 .projects h4 {
   text-align: center;
@@ -256,7 +264,7 @@ section:nth-child(3) {
 .projects p {
   position: relative;
   text-align: center;
-  margin: 20px 0;
+  margin: 20px 20px;
   
 }
 
@@ -314,3 +322,4 @@ img {
   background-color: var(--fourth);
   height: 1.5px;
 }
+
