@@ -228,21 +228,14 @@ section:nth-child(3) {
   text-align: center;
   color: var(--primary);
   margin-top: 20px;
-
 }
-
 .projects {
   display: grid;
   margin: 20px 20px;
   gap: 25px;
   justify-self: center;
   align-items: center;
- 
 }
-
-
-
-
 .projects img {
   border: var(--fourth) solid 1.5px;
   transition: linear 0.2s;
@@ -255,7 +248,6 @@ section:nth-child(3) {
 .projects div:hover {
   opacity: 0.5;
 }
-
 .projects h4 {
   text-align: center;
   margin: 12px 0px;
@@ -265,34 +257,127 @@ section:nth-child(3) {
   position: relative;
   text-align: center;
   margin: 20px 20px;
-  
 }
-
-
 .projects div:nth-child(1) {
   grid-column: 1/9;
-
   background-color: var(--secondary);
 
 }
-
 .projects div:nth-child(2) {
   grid-column: 1/9;
   background-color: var(--secondary);
-  
 }
-
 .projects div:nth-child(3) {
   grid-column: 1/9;
   background-color: var(--secondary);
-  
 }
-
 .projects div:nth-child(4) {
   grid-column: 1/9;
   background-color: var(--secondary);
  
 }
+/*Fourth Page*/
+
+.contactMePage {
+  background-color: var(--secondary);
+  border-top: 1.5px solid var(--fourth);
+  border-bottom: 1.5px solid var(--fourth);
+}
+.contactMePage h3 {
+  text-align: center;
+  margin: 20px 0px;
+  color: var(--primary);
+}
+.formContainer {
+  margin: 20px 20px;
+  
+}
+.formContainer div {
+  margin: 15px 5px;
+}
+
+
+.formContainer input, textarea, select {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 8px;
+  padding: 12px 10px;
+  transition: 0.2s linear;
+  border: 2px solid var(--third);
+}
+input:focus, textarea:focus {
+  border: 2px solid var(--fourth);
+}
+
+.formContainer input[type=text] {
+  background-image: url(/Assets/Icons/nameIcon.jpg);
+  background-position: 3px 8px;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  padding-left: 36px;
+}
+
+.formContainer input[type=email] {
+  background-image: url(/Assets/Icons/Email\ Icon.png);
+  background-position: 8px 14px;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  padding-left: 36px;
+}
+
+.formContainer select {
+  width: 100%;
+  background-image: url(/Assets/Icons/QuestionMarkIcon.png);
+  background-position: 13px 12px;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  padding-left: 30px;
+  cursor: pointer;
+  
+}
+.formContainer textarea {
+  resize: none;
+}
+
+.submitButton {
+  text-align: center;
+}
+.formContainer input[type=submit] {
+  position: relative;
+  padding: 10px 10px;
+  cursor: pointer;
+  height: 3em;
+  width: 10em;
+  border-radius: 50px;
+  background-color: var(--primary);
+  transition: 0.2s ease-in;
+  border: 2px solid var(--primary);
+  color: var(--secondary)
+}
+.formContainer input[type=submit]:hover {
+    background-color: var(--fourth);
+}
+
+/*Footer*/
+.footerContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  background-color: var(--secondary);
+}
+
+.footerContainer div {
+  background-color: var(--secondary);
+  width: auto;
+  padding: 20px 15px;
+  cursor: pointer;
+  color: grey;
+}
+
+.footerContainer div:hover {
+  color: var(--third);
+}
+
 
 
 
