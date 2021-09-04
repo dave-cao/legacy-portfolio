@@ -220,26 +220,70 @@ section:nth-child(3) {
 }
 
 /*Third Page*/
+.projectsPage h3 {
+  text-align: center;
+  color: var(--primary);
+  margin-top: 20px;
+
+}
+
+.projects {
+  display: grid;
+  margin: 20px 20px;
+  gap: 25px;
+  justify-self: center;
+  align-items: center;
+  
+}
+.projects img {
+  border: var(--fourth) solid 1.5px;
+  transition: linear 0.2s;
+}
+.projects div {
+  box-shadow: 5px 5px 20px black;
+}
+
+.projects img:hover {
+  opacity: 0.5;
+}
+
+
+.projects h4 {
+  text-align: center;
+  margin: 12px 0px;
+  color: var(--primary);
+}
+.projects p {
+  position: relative;
+  text-align: center;
+  margin: 20px 0;
+  
+}
+
 
 .projects div:nth-child(1) {
-  color: red;
   grid-column: 1/9;
-  background-color: blue;
+
+  background-color: var(--secondary);
+
 }
 
 .projects div:nth-child(2) {
-  color: red;
   grid-column: 1/9;
+  background-color: var(--secondary);
+  
 }
 
 .projects div:nth-child(3) {
-  color: red;
   grid-column: 1/9;
+  background-color: var(--secondary);
+  
 }
 
 .projects div:nth-child(4) {
-  color: red;
   grid-column: 1/9;
+  background-color: var(--secondary);
+ 
 }
 
 
