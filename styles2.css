@@ -82,6 +82,10 @@ a {
 .bold {
   color: var(--primary);
 }
+.hiddenLinks:hover {
+  color: lightskyblue;
+}
+
 
 /* fonts */
 @font-face {
