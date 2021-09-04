@@ -136,38 +136,51 @@
             </div>
         </section>
     
-        <div class="divider"></div> 
+      
 
         <section class="contactMePage">
-            <form class="formContainer">
+            <h3>Contact Me!</h3>
+            <!--Make this div action into a form later!--> 
+            <div action="" class="formContainer">
                 <div>
-                    <label for="firstName">First Name:</label>
-                    <input type="text" id="firstName" placeholder="First Name">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="user_name" placeholder="Full Name">
                 </div>
                 <div>
-                    <label for="lastName">Last Name:</label>
-                    <input type="text" id="lastName" placeholder="Last Name">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="user_email" placeholder="Email">
                 </div>
                 <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" placeholder="Email">
-                </div>
-                <div>
-                    <label for="comments">Comments:</label>
-                    <textarea name="comments" id="comments" cols="40" rows="5"></textarea>
-                </div>
-                
-                <input type="submit" value="submit" formtarget="_blank">
-            </form>
-        </section>
+                    <label for="occupation">Who Are You?</label>
+                    <select name="user_occupation" id="occupation">
+                        <option value="" disabled selected>Select your option</option>
+                        <option value="recruiter">Recruiter</option>
+                        <option value="friend">Friend</option>
+                        <option value="random">I just randomly came across this website</option>
+                        <option value="other">Other</option>
+                    </select>
 
-        <div class="divider"></div>     
+
+                </div>
+                <div>
+                    <label for="comments">Comments</label>
+                    <textarea name="user_comments" id="comments" cols="40" rows="5" placeholder="Feel free to leave any comments!"></textarea>
+                </div>
+
+                <div class="submitButton">
+                    <input type="submit" value="Submit" formtarget="_blank" id="submitButton" onclick="SUBMIT_PROMPT()">
+                </div>
+            </div>
+        </section>
+        
+
+          
 
         <footer>
             <div class="footerContainer">
-                <div>Youtube</div>
-                <div>Github</div>
-                <div>freeCodeCamp</div>
+                <a href="https://www.youtube.com/channel/UChW0GajbvBLr36d4JVFnV0A" target="_blank"><div>Youtube</div></a>
+                <a href="https://github.com/dave-cao" target="_blank"><div>Github</div></a>
+                <a href="https://www.freecodecamp.org/david-cao" target="_blank"><div>freeCodeCamp</div></a>
             </div> 
 
         </footer>
