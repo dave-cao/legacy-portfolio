@@ -217,10 +217,14 @@ section:nth-child(3) {
 .skills div:nth-child(4) {
   grid-column: 1/9;
 }
+.skills div:nth-child(5) {
+  grid-column: 1/9;
+}
 .skills h4 {
   font-weight: bold;
   
 }
+
 
 .skills ul li {
   margin-left: 30px;

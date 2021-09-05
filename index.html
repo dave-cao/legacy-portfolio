@@ -149,7 +149,7 @@
         <section class="contactMePage">
             <h3>Contact Me!</h3>
             <!--Make this div action into a form later!--> 
-            <div action="" class="formContainer">
+            <form id="myForm" class="formContainer" method="GET" action="form.html">
                 <div>
                     <label for="fullName">Full Name</label>
                     <input type="text" id="fullName" name="user_name" placeholder="Full Name">
@@ -174,15 +174,16 @@
                     <label for="comments">Comments</label>
                     <textarea name="user_comments" id="comments" cols="40" rows="5" placeholder="Feel free to leave any comments!"></textarea>
                 </div>
-
                 <div class="submitButton">
                     <input type="submit" value="Submit" formtarget="_blank" id="submitButton" onclick="SUBMIT_PROMPT()">
                 </div>
-            </div>
+            </form>
         </section>
         
-
-          
+          <p id="user_name"></p>
+          <p id="user_email"></p>
+          <p id="user_occupation"></p>
+          <p id="user_comments"></p>
 
         <footer>
             <div class="footerContainer">
