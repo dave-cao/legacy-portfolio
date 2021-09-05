@@ -33,7 +33,7 @@
         <div class="divider"></div>
 
         <section class="aboutMePage">
-            <h3>About Me</h3>
+            <a href="thanksPage.html" target="_blank"><h3>About Me</h3></a>
             <div class="_grid">
                 
                 <img src="/Assets/Thumbnails/ProfilePic.jpg" alt="A photo of my face" class="profilePicture">
@@ -149,7 +149,7 @@
         <section class="contactMePage">
             <h3>Contact Me!</h3>
             <!--Make this div action into a form later!--> 
-            <form id="myForm" class="formContainer" method="GET" action="form.html">
+            <form id="myForm" class="formContainer" method="POST" action="https://formsubmit.co/c486f10f72f571dbf74d62286cea006a">
                 <div>
                     <label for="fullName">Full Name</label>
                     <input type="text" id="fullName" name="user_name" placeholder="Full Name">
@@ -174,8 +174,13 @@
                     <label for="comments">Comments</label>
                     <textarea name="user_comments" id="comments" cols="40" rows="5" placeholder="Feel free to leave any comments!"></textarea>
                 </div>
+                <!--Configurations-->
+                <div>
+                    <input type="hidden" name="_next" value="https://davidcao.me/thanks.html">
+                    <input type="hidden" name="_captcha" value="false">
+                 </div>
                 <div class="submitButton">
-                    <input type="submit" value="Submit" formtarget="_blank" id="submitButton" onclick="SUBMIT_PROMPT()">
+                    <input type="submit" value="Submit" formtarget="" id="submitButton">
                 </div>
             </form>
         </section>
