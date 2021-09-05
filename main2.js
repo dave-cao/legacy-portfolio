@@ -9,10 +9,10 @@ const SUBMIT_PROMPT = () => {
     alert("Thank you for viewing my page! Unfortunately, this form function has not been implemented yet. To contact me, please email dcao@ualberta.ca. Thank you!");
 }
 
-const TESTING = (form) => {
-    let TestVar = form.user_name.value;
-    alert ("You typed: " + TestVar);
-}
+// const TESTING = (form) => {
+//     let TestVar = form.user_name.value;
+//     alert ("You typed: " + TestVar);
+// }
 
 // const writeText = (form) => {
 //     user_name.innerHTML = form.user_name.value;
