@@ -25,18 +25,24 @@
 
         
         <section class="mainPage">
-            <p class="myTitles"><span class="myTitlesFL">K</span>inesiologist<br /><span class="myTitlesFL">C</span>oding<br /><a href="https://youtu.be/Fdzs1dKkUHg" target="_blank"><span class="myTitlesFL hiddenLinks">A</span>dapting</a><br /><a href="https://youtu.be/dvFFb65pWnU" target="_blank"><span class="myTitlesFL hiddenLinks">L</span>earning</a><br /><span class="myTitlesFL">S</span>inging</p>
+            <p class="myTitles"><span id="kinesiologyTitle" onclick="runAnimation()"><span class="myTitlesFL">K</span>inesiologist</span><br /><span class="myTitlesFL">C</span>oding<br /><a href="https://youtu.be/Fdzs1dKkUHg" target="_blank"><span class="myTitlesFL hiddenLinks">A</span>dapting</a><br /><a href="https://youtu.be/dvFFb65pWnU" target="_blank"><span class="myTitlesFL hiddenLinks">L</span>earning</a><br /><span class="myTitlesFL">S</span>inging</p>
             <!-- <img class="heroBanner" src="/images/heroBanner.jpg" alt="myprofile"/> -->
             <div class="firstPageBackground"></div>
+
+            <div id="runContainer">
+                <img id="runAnimation" src="Assets/Video/narutoRun.gif"></img>
+            </div>
+
         </section>
 
         <div class="divider"></div>
 
         <section class="aboutMePage">
             <h3>About Me</h3>
+            <h4 id="myAge"></h4>
             <div class="_grid">
                 
-                <img src="/Assets/Thumbnails/ProfilePic.jpg" alt="A photo of my face" class="profilePicture">
+                <img src="/Assets/Thumbnails/ProfilePic.jpg" alt="A photo of my face" id="profilePicture" onclick="return changeProfilePicture()">
                 <div>
                     <h4 style="text-decoration: underline;">General Info About Me</h4>
                     <p>
@@ -149,7 +155,7 @@
         <section class="contactMePage">
             <h3>Contact Me!</h3>
             <!--Make this div action into a form later!--> 
-            <form id="myForm" class="formContainer" method="POST" action="https://formsubmit.co/c486f10f72f571dbf74d62286cea006a">
+            <form name="myForm" class="formContainer" method="POST" action="https://formsubmit.co/c486f10f72f571dbf74d62286cea006a" onsubmit="return validateForm()">
                 <div>
                     <label for="fullName">Full Name</label>
                     <input type="text" id="fullName" name="user_name" placeholder="Full Name">
@@ -158,7 +164,7 @@
                     <label for="email">Email</label>
                     <input type="email" id="email" name="user_email" placeholder="Email">
                 </div>
-                <div>
+                <!-- <div>
                     <label for="occupation">Who Are You?</label>
                     <select name="user_occupation" id="occupation">
                         <option value="" disabled selected>Select your option</option>
@@ -169,7 +175,7 @@
                     </select>
 
 
-                </div>
+                </div> -->
                 <div>
                     <label for="comments">Comments</label>
                     <textarea name="user_comments" id="comments" cols="40" rows="5" placeholder="Feel free to leave any comments!"></textarea>
@@ -184,11 +190,6 @@
                 </div>
             </form>
         </section>
-        
-          <p id="user_name"></p>
-          <p id="user_email"></p>
-          <p id="user_occupation"></p>
-          <p id="user_comments"></p>
 
         <footer>
             <div class="footerContainer">
