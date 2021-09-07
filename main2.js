@@ -146,10 +146,10 @@ const creditForDateScript = () => {
 
 const detect = document.getElementById("testing");
 const detectTWO = document.getElementById("testingTWO")
-let IOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+let IOS = /iPad|iPhone|iPod/i.test(navigator.userAgent) && !window.MSStream;
 const firstPageBackgroundImage = document.getElementById("firstPageBackground");
 const myProjectsBackground = document.querySelector(".projectsPage");
-const iPad = !!(navigator.userAgent.match(/(iPad)/) || (navigator.platform === "MacIntel" && typeof navigator.standalone !== "undefined"))
+const iPad = !!(navigator.userAgent.match(/(iPad)/i) || (navigator.platform === "MacIntel" && typeof navigator.standalone !== "undefined"))
 if (IOS || iPad) {
     firstPageBackgroundImage.style.position = "absolute";
     firstPageBackgroundImage.style.backgroundAttachment = "scroll";
