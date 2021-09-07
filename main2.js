@@ -145,7 +145,7 @@ const creditForDateScript = () => {
 
 
 const detect = document.getElementById("testing");
-const IOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+let IOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 const firstPageBackgroundImage = document.getElementById("firstPageBackground");
 const myProjectsBackground = document.querySelector(".projectsPage");
 
