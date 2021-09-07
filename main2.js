@@ -105,7 +105,7 @@ function getAge(dateString) {
     return age;
 }
 
-document.getElementById("myAge").innerHTML = `I am ${getAge("1999/10/11")} old.`;
+document.getElementById("myAge").innerHTML = `I am ${getAge("1999, 10, 9")} old.`;
 
  
 
