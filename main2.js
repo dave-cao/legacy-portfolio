@@ -55,57 +55,86 @@ const runAnimation = () => {
 
 
 //this ain't my code, when I have the time, I should figure this out.
-function getAge(dateString) {
-    var today = new Date();
-    var DOB = new Date(dateString);
-    var totalMonths = (today.getFullYear() - DOB.getFullYear()) * 12 + today.getMonth() - DOB.getMonth();
-    totalMonths += today.getDay() < DOB.getDay() ? -1 : 0;
-    var years = today.getFullYear() - DOB.getFullYear();
-    if (DOB.getMonth() > today.getMonth())
-        years = years - 1;
-    else if (DOB.getMonth() === today.getMonth())
-        if (DOB.getDate() > today.getDate())
-            years = years - 1;
-
-    var days;
-    var months;
-
-    if (DOB.getDate() > today.getDate()) {
-        months = (totalMonths % 12);
-        if (months == 0)
-            months = 11;
-        var x = today.getMonth();
-        switch (x) {
-            case 1:
-            case 3:
-            case 5:
-            case 7:
-            case 8:
-            case 10:
-            case 12: {
-                var a = DOB.getDate() - today.getDate();
-                days = 31 - a;
-                break;
-            }
-            default: {
-                var a = DOB.getDate() - today.getDate();
-                days = 30 - a;
-                break;
+function getAge(dateString,dateType) {
+    /*
+       function getAge
+       parameters: dateString dateType
+       returns: boolean
+    
+       dateString is a date passed as a string in the following
+       formats:
+    
+       type 1 : 19970529
+       type 2 : 970529
+       type 3 : 29/05/1997
+       type 4 : 29/05/97
+    
+       dateType is a numeric integer from 1 to 4, representing
+       the type of dateString passed, as defined above.
+    
+       Returns string containing the age in years, months and days
+       in the format yyy years mm months dd days.
+       Returns empty string if dateType is not one of the expected
+       values.
+    */
+    
+        var now = new Date();
+        var today = new Date(now.getYear(),now.getMonth(),now.getDate());
+    
+        var yearNow = now.getYear();
+        var monthNow = now.getMonth();
+        var dateNow = now.getDate();
+    
+        if (dateType == 1)
+            var dob = new Date(dateString.substring(0,4),
+                                dateString.substring(4,6)-1,
+                                dateString.substring(6,8));
+        else if (dateType == 2)
+            var dob = new Date(dateString.substring(0,2),
+                                dateString.substring(2,4)-1,
+                                dateString.substring(4,6));
+        else if (dateType == 3)
+            var dob = new Date(dateString.substring(6,10),
+                                dateString.substring(3,5)-1,
+                                dateString.substring(0,2));
+        else if (dateType == 4)
+            var dob = new Date(dateString.substring(6,8),
+                                dateString.substring(3,5)-1,
+                                dateString.substring(0,2));
+        else
+            return '';
+    
+        var yearDob = dob.getYear();
+        var monthDob = dob.getMonth();
+        var dateDob = dob.getDate();
+    
+        yearAge = yearNow - yearDob;
+    
+        if (monthNow >= monthDob)
+            var monthAge = monthNow - monthDob;
+        else {
+            yearAge--;
+            var monthAge = 12 + monthNow -monthDob;
+        }
+    
+        if (dateNow >= dateDob)
+            var dateAge = dateNow - dateDob;
+        else {
+            monthAge--;
+            var dateAge = 31 + dateNow - dateDob;
+    
+            if (monthAge < 0) {
+                monthAge = 11;
+                yearAge--;
             }
         }
+    
+        return yearAge + ' years, ' + monthAge + ' months, and ' + dateAge + ' days';
     }
-    else {
-        days = today.getDate() - DOB.getDate();
-        if (DOB.getMonth() === today.getMonth())
-            months = (totalMonths % 12);
-        else
-            months = (totalMonths % 12) + 1;
-    }
-    var age = years + ' years, ' + months + ' months, and ' + days + ' days';
-    return age;
-}
 
-document.getElementById("myAge").innerHTML = `I am ${getAge("1999, 10, 9")} old.`;
+document.getElementById("myAge").innerHTML = `I am ${getAge("11/10/1999", 3)} old.`;
+
+
 
  
 
