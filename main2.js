@@ -145,17 +145,21 @@ const creditForDateScript = () => {
 
 
 const detect = document.getElementById("testing");
+const detectTWO = document.getElementById("testingTWO")
 let IOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 const firstPageBackgroundImage = document.getElementById("firstPageBackground");
 const myProjectsBackground = document.querySelector(".projectsPage");
-
-if (IOS) {
+const iPad = !!(navigator.userAgent.match(/(iPad)/) || (navigator.platform === "MacIntel" && typeof navigator.standalone !== "undefined"))
+if (IOS || iPad) {
     firstPageBackgroundImage.style.position = "absolute";
     firstPageBackgroundImage.style.backgroundAttachment = "scroll";
     myProjectsBackground.style.background = "#232831";
 }
 const detectIOS = () => {
     detect.innerHTML = IOS;
+}
+const detectIPAD = () => {
+    detectTWO.innerHTML = iPad;
 }
 
 
