@@ -149,7 +149,7 @@ const detectTWO = document.getElementById("testingTWO")
 let IOS = /iPad|iPhone|iPod/i.test(navigator.userAgent) && !window.MSStream;
 const firstPageBackgroundImage = document.getElementById("firstPageBackground");
 const myProjectsBackground = document.querySelector(".projectsPage");
-const iPad = !!(navigator.userAgent.match(/(iPad)/i) || (navigator.platform === "MacIntel" && typeof navigator.standalone !== "undefined"))
+const iPad = !!(navigator.userAgent.match(/iPad|iPhone|iPod/i) || (navigator.platform === "MacIntel" && typeof navigator.standalone !== "undefined"))
 if (IOS || iPad) {
     firstPageBackgroundImage.style.position = "absolute";
     firstPageBackgroundImage.style.backgroundAttachment = "scroll";
