@@ -144,23 +144,18 @@ const creditForDateScript = () => {
 }
 
 
-const detect = document.getElementById("testing");
-const detectTWO = document.getElementById("testingTWO")
+//test to see and changes styles if on IOS or Ipad. IOS only works on phone whereas iPad works on phone and Ipad. I will leave both there in case something becasue deprecated
 let IOS = /iPad|iPhone|iPod/i.test(navigator.userAgent) && !window.MSStream;
+const iPad = !!(navigator.userAgent.match(/iPad|iPhone|iPod/i) || (navigator.platform === "MacIntel" && typeof navigator.standalone !== "undefined"))
 const firstPageBackgroundImage = document.getElementById("firstPageBackground");
 const myProjectsBackground = document.querySelector(".projectsPage");
-const iPad = !!(navigator.userAgent.match(/iPad|iPhone|iPod/i) || (navigator.platform === "MacIntel" && typeof navigator.standalone !== "undefined"))
+
 if (IOS || iPad) {
     firstPageBackgroundImage.style.position = "absolute";
     firstPageBackgroundImage.style.backgroundAttachment = "scroll";
     myProjectsBackground.style.background = "#232831";
 }
-const detectIOS = () => {
-    detect.innerHTML = IOS;
-}
-const detectIPAD = () => {
-    detectTWO.innerHTML = iPad;
-}
+
 
 
 
