@@ -137,7 +137,7 @@ section:nth-child(3) {
   width: 100vw;
   height: 100vh;
 }
-.firstPageBackground {
+#firstPageBackground {
   position: fixed;
   max-width: 100%;
   width: 100vw;
@@ -261,11 +261,12 @@ section:nth-child(3) {
 .projectsPage h3 {
   text-align: center;
   color: var(--primary);
-  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1.5px solid var(--fourth);
 }
 .projects {
   display: grid;
-  margin: 20px 20px;
+  padding: 20px 20px;
   gap: 25px;
   justify-self: center;
   align-items: center;

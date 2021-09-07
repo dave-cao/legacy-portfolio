@@ -138,13 +138,26 @@ function getAge(dateString,dateType) {
 
 document.getElementById("myAge").innerHTML = `I am ${getAge("11/10/1999", 3)} old.`;
 
+//YOU WILL HAVE THIS HERE UNTIL YOU FKING FIGURE OUT HOW TO DO THIS SHIT YOURSELF!!! 
 const creditForDateScript = () => {
     alert("The credit for this date script goes to Martin Webb at https://www.irt.org/script/29.htm. A new tab will open directing you to the source code.")
 }
 
 
+const detect = document.getElementById("testing");
+const IOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+const firstPageBackgroundImage = document.getElementById("firstPageBackground");
+const myProjectsBackground = document.querySelector(".projectsPage");
 
- 
+if (IOS) {
+    firstPageBackgroundImage.style.position = "absolute";
+    firstPageBackgroundImage.style.backgroundAttachment = "scroll";
+    myProjectsBackground.style.background = "#232831";
+}
+const detectIOS = () => {
+    detect.innerHTML = IOS;
+}
+
 
 
     
