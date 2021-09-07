@@ -138,6 +138,10 @@ function getAge(dateString,dateType) {
 
 document.getElementById("myAge").innerHTML = `I am ${getAge("11/10/1999", 3)} old.`;
 
+const creditForDateScript = () => {
+    alert("The credit for this date script goes to Martin Webb at https://www.irt.org/script/29.htm. A new tab will open directing you to the source code.")
+}
+
 
 
  
