@@ -25,10 +25,14 @@ const photoGallery = [
     "/Assets/PhotoGallery/skyDiving.jpg",
     "/Assets/PhotoGallery/teletonRehab.jpg",
     "/Assets/PhotoGallery/walkWithFriend.jpg",
-    "/Assets/Thumbnails/ProfilePic.jpg"
+    "/Assets/Thumbnails/ProfilePic.jpg",
+    "/Assets/PhotoGallery/bigWorld.jpg",
+    "/Assets/PhotoGallery/snazzy.jpg",
+    "/Assets/PhotoGallery/withAngels.jpg",
+    "/Assets/PhotoGallery/teddyBear.jpg"
 ]
 const changeProfilePicture = () => {
-    let randomNumber = Math.floor(Math.random() * 8);
+    let randomNumber = Math.floor(Math.random() * 12);
     console.log(randomNumber);
     document.querySelector("#profilePicture").src = photoGallery[randomNumber];
 }
