@@ -12,13 +12,13 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  outline: black;
   font-family: "Nanum Myeongjo";
 }
 html {
   position: relative;
   background-color: var(--secondary);
   color: var(--third);
+  z-index: -2;
   
 }
 
@@ -28,8 +28,11 @@ html {
   grid-template-columns: repeat(8, 1fr);
   align-items: center;
 }
+.navBar li {
+  list-style: none;
+}
 li a {
-  color: black;
+  color: var(--third);
   text-decoration: none;
   transition: ease-in 0.2s;
 }
@@ -52,18 +55,15 @@ a {
   grid-column: 1/3;
 }
 .nav_links_container li:nth-child(2) {
-  grid-column: 3/5;
+  grid-column: 4/6;
 }
 .nav_links_container li:nth-child(3) {
-  grid-column: 5/7;
-}
-.nav_links_container li:nth-child(4) {
   grid-column: 7/9;
 }
 
 .contactButton {
   border: none;
-  color: #f5f5f5;
+  color: var(--secondary);
   justify-self: center;
   height: 3em;
   width: 10em;
@@ -86,6 +86,12 @@ a {
   color: lightskyblue;
 }
 
+img {
+  width: 100%;
+  max-width: 100vw;
+  height: auto;
+}
+
 
 /* fonts */
 @font-face {
@@ -95,7 +101,8 @@ a {
 
 /* Mobile styles */
 .navBar {
-  display: none;
+  opacity: 0;
+  position: absolute;
 }
 
 /*First Page*/
@@ -258,11 +265,13 @@ section:nth-child(3) {
 }
 
 /*Third Page*/
+.projectsPage {
+  border-top: 1.5px solid var(--fourth);
+}
 .projectsPage h3 {
   text-align: center;
   color: var(--primary);
   padding-top: 20px;
-  border-top: 1.5px solid var(--fourth);
 }
 .projects {
   display: grid;
@@ -417,26 +426,211 @@ input:focus, textarea:focus {
 
 
 
+
 /* small tablet sizes */
-@media screen and (min-width: 620px) {
+@media screen and (min-width: 600px) {
+  /*second page*/
+  #profilePicture {
+    width: 60%;
+  }
+  .aboutMePage {
+    font-size: 1.1em;
+    padding: 1.5em 2em;
+  }
+  /*third page*/
+  .projectsPage {
+    font-size: 1.1em;
+    padding-top: 5px;
+  }
+  .projects {
+    margin: 0.3em 3em;
+  }
+
+  /*fourth page*/
+  .contactMePage {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
 }
 
 /*Laptop*/
-@media screen and (min-width: 960px) {
+/*first page*/
+@media screen and (min-width: 760px) {
+  @keyframes navBar {
+    100% {
+      opacity: 1;
+    }
+  }
+  .navBar {
+    opacity: 0;
+    width: 100%;
+    border-bottom: 1.5px solid var(--fourth);
+    color: white;
+    animation: navBar 1s ease-in 6.5s forwards;
+  }
+  #profilePicture {
+    width: 50%;
+  }
+
+  /*second page*/
+  .aboutMePage {
+    font-size: 1.1em;
+    padding: 1.5em 5em;
+  }
+  /*Skills*/
+  .skills div:nth-child(1) {
+    grid-column: 1/4;
+    grid-row: 1/2
+    
+  }
+  .skills div:nth-child(2) {
+    padding-top: 0px;
+    grid-column: 5/9;
+    grid-row: 1/2
+ 
+  }
+  .skills div:nth-child(3) {
+    grid-column: 1/4;
+  
+  }
+  /*REMEMBER THIS MARGIN LOL*/
+  .skills div:nth-child(4) {
+    margin-top: 30px;
+    grid-column: 5/9;
+  }
+  .skills div:nth-child(5) {
+    grid-column: 1/9;
+  }
+  .skills h4 {
+    font-weight: bold;
+  }
+
+  /*thirdPage*/
+  .projects div:nth-child(1) {
+    grid-column: 1/5;
+    background-color: var(--secondary);
+  
+  }
+  .projects div:nth-child(2) {
+    grid-column: 5/9;
+    background-color: var(--secondary);
+  }
+  .projects div:nth-child(3) {
+    grid-column: 1/5;
+    background-color: var(--secondary);
+  }
+  .projects div:nth-child(4) {
+    grid-column: 5/9;
+    background-color: var(--secondary);
+  }
+
+  /*fourth page*/
+  .contactMePage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .formContainer{
+    width: 601px;
+   
+  }
 }
 
 /*Desktop*/
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1180px) {
+
+  /*second page*/
+  #profilePicture {
+    width: 500px;
+  }
+  .aboutMePage {
+    font-size: 1.3em;
+    padding: 1.5em 6em;
+  }
+  .aboutMeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  /*third page*/
+  .projectsPage {
+    font-size: 1.1em;
+    padding-top: 5px;
+  }
+  /*We could have also gridded this*/
+  .projects {
+    margin: 0.3em 6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .projects div {
+    width: 450px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*fourth page*/
+  .contactMePage {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+
+}
+
+/*Ultra-wide*/
+@media screen and (min-width: 1500px) {
+    /*second page*/
+    .aboutMePage {
+      padding: 3em 15em;
+    }
+    .skills div:nth-child(1) {
+      grid-column: 1/3;
+      grid-row: 1/2
+      
+    }
+    .skills div:nth-child(2) {
+      padding-top: 0px;
+      grid-column: 4/6;
+      grid-row: 1/2
+   
+    }
+    .skills div:nth-child(3) {
+      grid-column: 7/9;
+    
+    }
+    /*REMEMBER THIS MARGIN LOL*/
+    .skills div:nth-child(4) {
+      margin-top: 30px;
+      grid-column: 1/3;
+    }
+    .skills div:nth-child(5) {
+      grid-column: 4/6;
+    }
+    /*third page*/
+    .projectsPage {
+      font-size: 1.1em;
+      padding-top: 5px;
+    }
+    .projects {
+      margin: 0.3em 3em;
+    }
+  
+    /*fourth page*/
+    .contactMePage {
+      padding-left: 3em;
+      padding-right: 3em;
+    }
 }
 
 /*Testing*/
 
 
-img {
-  width: 100%;
-  max-width: 100vw;
-  height: auto;
-}
+ 
+
 
 .divider {
   background-color: var(--fourth);

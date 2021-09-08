@@ -27,12 +27,11 @@ const photoGallery = [
     "/Assets/PhotoGallery/walkWithFriend.jpg",
     "/Assets/Thumbnails/ProfilePic.jpg",
     "/Assets/PhotoGallery/bigWorld.jpg",
-    "/Assets/PhotoGallery/snazzy.jpg",
     "/Assets/PhotoGallery/withAngels.jpg",
     "/Assets/PhotoGallery/teddyBear.jpg"
 ]
 const changeProfilePicture = () => {
-    let randomNumber = Math.floor(Math.random() * 12);
+    let randomNumber = Math.floor(Math.random() * 11);
     console.log(randomNumber);
     document.querySelector("#profilePicture").src = photoGallery[randomNumber];
 }
