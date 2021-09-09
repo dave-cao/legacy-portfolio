@@ -28,10 +28,11 @@ const photoGallery = [
     "/Assets/Thumbnails/ProfilePic.jpg",
     "/Assets/PhotoGallery/bigWorld.jpg",
     "/Assets/PhotoGallery/withAngels.jpg",
-    "/Assets/PhotoGallery/teddyBear.jpg"
+    "/Assets/PhotoGallery/teddyBear.jpg",
+    "/Assets/PhotoGallery/posingMexico.jpg"
 ]
 const changeProfilePicture = () => {
-    let randomNumber = Math.floor(Math.random() * 11);
+    let randomNumber = Math.floor(Math.random() * 12);
     console.log(randomNumber);
     document.querySelector("#profilePicture").src = photoGallery[randomNumber];
 }
@@ -270,5 +271,88 @@ function clickMyName() {
     
 }
 
+//Simple button click counter
 
+let counter = 0;
+
+const createButton = () => {
+    const contactMeTitle = document.getElementById("contactMeTitle");
+    const buttonClickerContainer = document.getElementById("buttonClicker")
+    const contactButton = document.createElement("button")
+    if (counter === 1) return;
+    counter++
+    contactButton.innerHTML = "Counter!";
+    buttonClickerContainer.appendChild(contactButton);
+}
+
+//prizes
+const prizeContainer = document.getElementById("prize");
+let prizeLink = document.createElement("a")
+prizeLink.innerHTML = ("My Study Group Discord Server");
+prizeLink.setAttribute("href", "https://discord.gg/vh6BNFhb")
+prizeLink.setAttribute("target", "_blank")
+const clickCounter = () => {
+    
+    if (counter === 100) {
+        prizeContainer.innerHTML = "You know theres absolutely no reward for this right?"
+    }
+    if (counter === 300) {
+        prizeContainer.innerHTML = "Woah...that's 300"
+    }
+    if (counter === 500) {
+        
+        let id;
+        let pos = 0;
+        let rewardAnimation = document.getElementById("rewardAnimation");
+        let rewardContainer = document.getElementById("rewardContainer");
+        rewardContainer.style.display = "block"
+        rewardAnimation.style.display = "block"
+        clearInterval(id);
+        let frame = () => {
+            if (pos == 120) {
+                clearInterval(id);
+                rewardAnimation.style.display = "none";
+                rewardContainer.style.display = "none";
+            }
+            else {
+                 pos++;
+                rewardAnimation.style.left = pos + "%";
+            }
+        }
+        id = setInterval(frame, 20);
+        prizeContainer.innerHTML = "WOWZERS YOU GANSTA"
+        
+    }
+    if (counter === 1000) {
+        prizeContainer.innerHTML = "Hey, if your willing to click this many times, that means you can fill out the form and send me a message right?"
+    }
+    if (counter === 1500) {
+        prizeContainer.innerHTML = "You're an absolute stud"
+    }
+    if (counter === 2000) {
+        alert("Congratz! You have gained absolutely nothing!")
+    }
+    if (counter === 3000) {
+        prizeContainer.appendChild(prizeLink);
+    }
+    if (counter === 3010) {
+        prizeContainer.removeChild(prizeLink)
+    }
+    if (counter === 5000) {
+        prizeContainer.innerHTML = "There's nothing after this, you should stop"
+    }
+    if (counter === 8000) {
+        prizeContainer.innerHTML = "I'm serious, theres nothing after this."
+    }
+    if (counter === 10000) {
+        alert("You need help.")
+        prizeContainer.innerHTML = "You need help."
+    }
+    contactMeTitle.innerHTML = counter;
+    counter++;
+    
+}
+
+
+ 
     
