@@ -165,10 +165,15 @@
         </section>
     
       
-
+        <div id="rewardContainer">
+            <img id="rewardAnimation" src="Assets/images/sunglasses.jpg"></img>
+        </div>
         <section id="contactMe" class="contactMePage">
-            <h3>Contact Me!</h3>
-            <!--Make this div action into a form later!--> 
+           
+            <h3 id="contactMeTitle" onclick="createButton()">Contact Me!</h3>
+            <div id="buttonClicker" onclick="clickCounter()"></div>
+            <div id="prize"></div>
+            
             <form name="myForm" class="formContainer" method="POST" action="https://formsubmit.co/c486f10f72f571dbf74d62286cea006a" onsubmit="return validateForm()">
                 <div>
                     <label for="fullName">Full Name</label>
@@ -178,18 +183,6 @@
                     <label for="email">Email</label>
                     <input type="email" id="email" name="user_email" placeholder="Email">
                 </div>
-                <!-- <div>
-                    <label for="occupation">Who Are You?</label>
-                    <select name="user_occupation" id="occupation">
-                        <option value="" disabled selected>Select your option</option>
-                        <option value="recruiter">Recruiter</option>
-                        <option value="friend">Friend</option>
-                        <option value="random">I just randomly came across this website</option>
-                        <option value="other">Other</option>
-                    </select>
-
-
-                </div> -->
                 <div>
                     <label for="comments">Comments</label>
                     <textarea name="user_comments" id="comments" cols="40" rows="5" placeholder="Feel free to leave any comments!"></textarea>

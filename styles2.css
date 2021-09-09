@@ -96,6 +96,40 @@ img {
   height: auto;
 }
 
+/*Contact Me JS*/
+#prize, #buttonClicker {
+  text-align: center;
+}
+#buttonClicker button {
+  position: relative;
+  cursor: pointer;
+  height: 2em;
+  width: 5em;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  background-color: var(--primary);
+  transition: 0.2s ease-in;
+  border: 2px solid var(--primary);
+  color: var(--secondary);
+ 
+}
+#prize a:hover {
+  color: skyblue;
+}
+#rewardContainer {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow-x: hidden;
+  display: none;
+}
+#rewardAnimation {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  left: -100px;
+}
+
 
 /* fonts */
 @font-face {
@@ -329,6 +363,9 @@ section:nth-child(3) {
  
 }
 /*Fourth Page*/
+#contactMeTitle {
+  cursor: pointer;
+}
 
 .contactMePage {
   background-color: var(--secondary);
