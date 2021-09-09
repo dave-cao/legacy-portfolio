@@ -353,6 +353,12 @@ const clickCounter = () => {
     
 }
 
+//last easter egg
+
+const simpleAlert = () => {
+    alert("Hey, hey hey, why are randomly clicking on this page? Anyway, since you clicked on this word, that means you're a little bit into coding. If you want to learn, you should check out freeCodeCamp!")
+}
+
 
  
     
