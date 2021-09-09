@@ -155,7 +155,120 @@ if (IOS || iPad) {
     myProjectsBackground.style.background = "#232831";
 }
 
+//Have some fun clicking my Name!
 
+const myName = document.querySelector(".name");
+
+const yourNameArray = [
+    "Loser",
+    "Dork",
+    "Geek",
+    "Bum",
+    "Shipwreck",
+    "Failure",
+    "Let-Down"
+]
+let yourName = yourNameArray[Math.floor(Math.random()*7)];
+
+const clickNameArray = [
+    "Hey there!",
+    "Why are you clicking on my name?",
+    "kinda rude...",
+    "uhmmm, okay?",
+    "seriously, what do you want?",
+    "Do you have nothing better to do?",
+    "okay, your a determined one huh?",
+    "Maybe you think you'll get nudes from this?",
+    "Yea thats not happening",
+    "Once upon a time",
+    "There was a kid named...",
+    "hey whats your name?",
+    `So your name is ${yourName}?`,
+    "...",
+    "It's okay, we don't get to choose our names",
+    `Alright ${yourName}!`,
+    `${yourName}...`,
+    "hehe...",
+    "okay, sorry",
+    "Now where was I...",
+    "Right.",
+    `There was a kid named ${yourName}`,
+    `${yourName} went on an adventure to see the world`,
+    "So they travelled to a forest.",
+    "But right when they got there...",
+    "...",
+    "......",
+    "............",
+    "Sorry this was for suspense",
+    "But right when they got there!",
+    "They were eaten by a lion shark dolphin and died.",
+    "...",
+    ".....",
+    ".........",
+    ".............",
+    ".......................",
+    "....................................................................................................................",
+    "OKAY WHAT MORE DO YOU WANT?",
+    "You didn't like the story?",
+    `Well too bad`,
+    `Just like you didn't get to choose your name`,
+    "You don't get to choose what story is told",
+    "DAM YOUR STILL CLICKING?",
+    ".....",
+    "....",
+    "...",
+    "..",
+    ".",
+    "Alright, your one persistant bastard",
+    "YOU WILL RUE THE DAY YOU MESSED WITH ME",
+    "MARK MY WORDS MORTAL",
+    "yo",
+    "Don't make me read you a bed time story",
+    "go to sleep man",
+    "Are you really wasting your time clicking on my name?",
+    'lalalalal',
+    "la dee dum, laa dee dum.",
+    "fine",
+    "you want something?",
+    "I'll give you a secret link",
+    "That way you'll be off my back right?",
+    "alright...",
+    "the secret link is...",
+    "okay...",
+    "the secret...",
+    "...",
+    ".....",
+    "the secret.....!!!",
+    "!!!!!!",
+    "!!!!!!!!!!!",
+    "AHHHHHH",
+    "AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH",
+    "AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH",
+    "UNLIMITED POWER",
+    "AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH",
+    "LETS GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO", 
+    "AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH",
+]
+
+let increment = 0;
+function clickMyName() {
+    if (increment === 12) {
+        const yourRealName = prompt("Please input your name");
+    } 
+    if (increment === clickNameArray.length) {
+        alert(`Hey ${yourName}, it looks like you broke the name...Did you really click it that many times?`)
+        
+    }
+   
+    if (increment === clickNameArray.length) {
+        myName.innerHTML = "Broken";
+        return;
+    } else {
+        myName.innerHTML = clickNameArray[increment]
+        increment++;
+    }
+    
+}
 
 
     

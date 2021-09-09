@@ -13,6 +13,7 @@
   padding: 0;
   margin: 0;
   font-family: "Nanum Myeongjo";
+  scroll-behavior: smooth;
 }
 html {
   position: relative;
@@ -63,7 +64,7 @@ a {
 
 .contactButton {
   border: none;
-  color: var(--secondary);
+  
   justify-self: center;
   height: 3em;
   width: 10em;
@@ -73,6 +74,9 @@ a {
   cursor: pointer;
   background-color: var(--primary);
   transition: 0.2s ease-in;
+}
+.contactButton a {
+  color: var(--secondary);
 }
 .contactButton:hover {
   color: var(--secondary);
@@ -103,6 +107,8 @@ img {
 .navBar {
   opacity: 0;
   position: absolute;
+  display: none;
+  background: var(--secondary);
 }
 
 /*First Page*/
@@ -133,6 +139,8 @@ img {
   font-size: 1em;
   margin: 20px 20px;
   animation: name 5s ease-in-out reverse;
+  cursor: pointer;
+  z-index: 2;
 }
 
 section:nth-child(3) {
@@ -466,6 +474,7 @@ input:focus, textarea:focus {
     width: 100%;
     border-bottom: 1.5px solid var(--fourth);
     color: white;
+    display: grid;
     animation: navBar 1s ease-in 6.5s forwards;
   }
   #profilePicture {
@@ -563,14 +572,31 @@ input:focus, textarea:focus {
   /*We could have also gridded this*/
   .projects {
     margin: 0.3em 6em;
-    display: flex;
     justify-content: center;
     align-items: center;
+    gap: 40px;
   }
   .projects div {
     width: 450px;
     justify-content: center;
     align-items: center;
+  }
+  .projects div:nth-child(1) {
+    grid-column: 4/5;
+    background-color: var(--secondary);
+  
+  }
+  .projects div:nth-child(2) {
+    grid-column: 5/6;
+    background-color: var(--secondary);
+  }
+  .projects div:nth-child(3) {
+    grid-column: 4/5;
+    background-color: var(--secondary);
+  }
+  .projects div:nth-child(4) {
+    grid-column: 5/6;
+    background-color: var(--secondary);
   }
 
   /*fourth page*/
