@@ -13,14 +13,14 @@
         <link rel="stylesheet" href="styles2.css">
     </head>
     <body>
-        <div><h1 class="name">David Cao</h1></div>
+        <div><h1 class="name" onclick="clickMyName()">David Cao</h1></div>
         <nav class="navBar grid">
             <ul class="nav_links_container grid">
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">My Projects</a></li>
+                <li><a href="#aboutMe">About Me</a></li>
+                <li><a href="#myProjects">My Projects</a></li>
                 <li><a href="#">Goals</a></li>
             </ul>
-            <button class="contactButton">Contact Me!</button>
+            <button class="contactButton"><a href="#contactMe">Contact Me!</a></button>
 
         </nav>
         
@@ -48,7 +48,7 @@
 
         <div class="divider"></div>
 
-        <section class="aboutMePage">
+        <section id="aboutMe" class="aboutMePage">
             <h3>About Me</h3>
             <a href="https://www.irt.org/script/29.htm" target="_blank"><h4 id="myAge" onclick="creditForDateScript()"></h4></a>
             <div class="aboutMeContainer">
@@ -98,19 +98,20 @@
                             </ul>
 
                         </div>
-                        <div>
-                            <h4>Arts</h4>
-                            <ul>
-                                <a href="/Assets/Music/cheerSong.mp3" target="_blank"><li class="bold hiddenLinks">Singing - Choir (UAMC)</li></a>
-                                <li>Piano</li>
-                            </ul>
-                        </div>
+                        
                         <div>
                             <h4>Language</h4>
                             <ul>
                                 <li class="bold">English</li>
                                 <li>Vietnamese</li>
                                 <li>Spanish (Currently Learning)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Arts</h4>
+                            <ul>
+                                <a href="/Assets/Music/cheerSong.mp3" target="_blank"><li class="bold hiddenLinks">Singing - Choir (UAMC)</li></a>
+                                <li>Piano</li>
                             </ul>
                         </div>
                         <div>
@@ -128,7 +129,7 @@
        
 
 
-        <section class="projectsPage">
+        <section id="myProjects" class="projectsPage">
             <h3>My Projects</h3>
             <div class="grid projects">
                 
@@ -165,7 +166,7 @@
     
       
 
-        <section class="contactMePage">
+        <section id="contactMe" class="contactMePage">
             <h3>Contact Me!</h3>
             <!--Make this div action into a form later!--> 
             <form name="myForm" class="formContainer" method="POST" action="https://formsubmit.co/c486f10f72f571dbf74d62286cea006a" onsubmit="return validateForm()">
