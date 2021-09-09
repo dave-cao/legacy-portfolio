@@ -475,7 +475,7 @@ input:focus, textarea:focus {
     border-bottom: 1.5px solid var(--fourth);
     color: white;
     display: grid;
-    animation: navBar 1s ease-in 6.5s forwards;
+    animation: navBar 1s ease-in 5s forwards;
   }
   #profilePicture {
     width: 50%;
