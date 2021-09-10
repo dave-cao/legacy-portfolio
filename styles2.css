@@ -100,7 +100,7 @@ img {
 #prize, #buttonClicker {
   text-align: center;
 }
-#buttonClicker button {
+#buttonClicker button:nth-child(1) {
   position: relative;
   cursor: pointer;
   height: 2em;
@@ -130,6 +130,28 @@ img {
   left: -100px;
 }
 
+#counterButton {
+  display: none;
+}
+#buttonClicker {
+  display: none;
+  justify-content: center;
+  height: 40px;
+}
+#autoButton {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  height: 2em;
+  width: 8em;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  background-color: var(--primary);
+  transition: 0.2s ease-in;
+  border: 2px solid var(--primary);
+  color: var(--secondary);
+  left: 15%;
+}
 
 /* fonts */
 @font-face {
