@@ -171,7 +171,10 @@
         <section id="contactMe" class="contactMePage">
            
             <h3 id="contactMeTitle" onclick="createButton()">Contact Me!</h3>
-            <div id="buttonClicker" onclick="clickCounter()"></div>
+            <div id="buttonClicker">
+                <button id="counterButton" onclick="clickCounter()">Counter!</button>
+                <button id="autoButton" onclick="autoClicker()">Auto-Clicker!</button>
+            </div>
             <div id="prize"></div>
             
             <form name="myForm" class="formContainer" method="POST" action="https://formsubmit.co/c486f10f72f571dbf74d62286cea006a" onsubmit="return validateForm()">

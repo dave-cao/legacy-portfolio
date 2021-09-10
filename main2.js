@@ -274,83 +274,113 @@ function clickMyName() {
 //Simple button click counter
 
 let counter = 0;
+const buttonClickerContainer = document.getElementById("buttonClicker");
+const contactButton = document.createElement("button");
+contactButton.innerHTML = "Counter!";
+contactButton.setAttribute("id", "counterButton");
 
-const createButton = () => {
-    const contactMeTitle = document.getElementById("contactMeTitle");
-    const buttonClickerContainer = document.getElementById("buttonClicker")
-    const contactButton = document.createElement("button")
-    if (counter === 1) return;
-    counter++
-    contactButton.innerHTML = "Counter!";
-    buttonClickerContainer.appendChild(contactButton);
+function createButton() {
+    const counterButton = document.getElementById("counterButton");
+    counterButton.style.display = "block";
+    buttonClickerContainer.style.display = "flex";
 }
 
 //prizes
+const autoButton = document.getElementById("autoButton")
 const prizeContainer = document.getElementById("prize");
 let prizeLink = document.createElement("a")
 prizeLink.innerHTML = ("My Study Group Discord Server");
 prizeLink.setAttribute("href", "https://discord.gg/vh6BNFhb")
 prizeLink.setAttribute("target", "_blank")
+let autoClickIncrement = 0;
 const clickCounter = () => {
-    
-    if (counter === 100) {
-        prizeContainer.innerHTML = "You know theres absolutely no reward for this right?"
-    }
-    if (counter === 300) {
-        prizeContainer.innerHTML = "Woah...that's 300"
-    }
-    if (counter === 500) {
-        
-        let id;
-        let pos = 0;
-        let rewardAnimation = document.getElementById("rewardAnimation");
-        let rewardContainer = document.getElementById("rewardContainer");
-        rewardContainer.style.display = "block"
-        rewardAnimation.style.display = "block"
-        clearInterval(id);
-        let frame = () => {
-            if (pos == 120) {
-                clearInterval(id);
-                rewardAnimation.style.display = "none";
-                rewardContainer.style.display = "none";
+    //100, 200, 300, 500, 1000, 1500, 2000, 3000, 3500, 5000, 8000, 10000, 20000
+    switch(counter) {
+        case 100: 
+            prizeContainer.innerHTML = "You know theres absolutely no reward for this right?";
+            break;
+        case 200:
+            prizeContainer.innerHTML = "Interesting...";
+            break;
+        case 300:
+            prizeContainer.innerHTML = "Woah...that's 300";
+            break;
+        case 500:
+            let id;
+            let pos = 0;
+            let rewardAnimation = document.getElementById("rewardAnimation");
+            let rewardContainer = document.getElementById("rewardContainer");
+            rewardContainer.style.display = "block"
+            rewardAnimation.style.display = "block"
+            clearInterval(id);
+            let frame = () => {
+                if (pos == 120) {
+                    clearInterval(id);
+                    rewardAnimation.style.display = "none";
+                    rewardContainer.style.display = "none";
+                }
+                else {
+                    pos++;
+                    rewardAnimation.style.left = pos + "%";
+                }
             }
-            else {
-                 pos++;
-                rewardAnimation.style.left = pos + "%";
-            }
-        }
-        id = setInterval(frame, 20);
-        prizeContainer.innerHTML = "WOWZERS YOU GANSTA"
-        
+            id = setInterval(frame, 20);
+            prizeContainer.innerHTML = "WOWZERS YOU GANSTA"
+            break;
+        case 1000:
+            prizeContainer.innerHTML = "Hey, if your willing to click this many times, that means you can fill out the form and send me a message right?"
+            break;
+        case 1500:
+            prizeContainer.innerHTML = "You're an absolute stud"
+            break;
+        case 2000:
+            prizeContainer.innerHTML = "Congratz! You have gained absolutely nothing!"
+            break;
+        case 3000:
+            prizeContainer.innerHTML = "";
+            prizeContainer.appendChild(prizeLink);
+            break;
+        case 3500:
+            prizeContainer.removeChild(prizeLink)
+            break;
+        case 5000:
+            prizeContainer.innerHTML = "There's nothing after this, you should stop"
+            break;
+        case 8000:
+            prizeContainer.innerHTML = "I'm serious, theres nothing after this."
+            break;
+        case 10000:
+            prizeContainer.innerHTML = "You need help."
+            break;
+        case 20000:
+            prizeContainer.innerHTML = "Alright, you just left it on didn't you."
+            break;
     }
-    if (counter === 1000) {
-        prizeContainer.innerHTML = "Hey, if your willing to click this many times, that means you can fill out the form and send me a message right?"
+    //so that auto-click button doesn't show up after second time
+    if (counter === 700 && autoClickIncrement === 0) {
+        autoButton.style.display = "block" 
+        prizeContainer.innerHTML = "Lose 600 clicks to gain an auto-clicker!"
+        autoClickIncrement++
     }
-    if (counter === 1500) {
-        prizeContainer.innerHTML = "You're an absolute stud"
-    }
-    if (counter === 2000) {
-        alert("Congratz! You have gained absolutely nothing!")
-    }
-    if (counter === 3000) {
-        prizeContainer.appendChild(prizeLink);
-    }
-    if (counter === 3010) {
-        prizeContainer.removeChild(prizeLink)
-    }
-    if (counter === 5000) {
-        prizeContainer.innerHTML = "There's nothing after this, you should stop"
-    }
-    if (counter === 8000) {
-        prizeContainer.innerHTML = "I'm serious, theres nothing after this."
-    }
-    if (counter === 10000) {
-        alert("You need help.")
-        prizeContainer.innerHTML = "You need help."
+    if (counter === 1400 && autoClickIncrement === 1) {
+        autoButton.style.display = "block";
+        prizeContainer.innerHTML = "Lose another 600 clicks to get auto-clicker X2!!"
+        autoClickIncrement++
     }
     contactMeTitle.innerHTML = counter;
     counter++;
     
+}
+//autoClickerFunction
+const autoClicker = () => { 
+    autoButton.style.display = "none" 
+    counter -= 600;
+    function timeFunction () {
+       
+        clickCounter();
+
+    }
+    let myInterval = setInterval(timeFunction, 300);
 }
 
 //last easter egg
