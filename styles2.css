@@ -297,6 +297,30 @@ section:nth-child(3) {
   line-height: 1.8;
   text-indent: 20px;
 }
+/*This is for images within the about me section*/
+#kinesiologyPicture, #codingPicture {
+  border: 2px solid var(--primary);
+  background-color: #232831;
+  
+}
+#kinesiologyPicture img, #codingPicture img{
+  cursor: default;
+}
+#kinesiologyPicture {
+  padding: 20px 20px 0px 20px;
+  
+}
+#codingPicture {
+  margin: 20px 0px 25px 0px;
+  padding: 20px 20px;
+
+}
+
+#codingPicture :nth-child(2) {
+  margin-top: 10px;
+}
+
+
 
 /*Skills*/
 .skills div:nth-child(1) {
@@ -545,6 +569,24 @@ input:focus, textarea:focus {
     font-size: 1.1em;
     padding: 1.5em 5em;
   }
+  /*About me pictures*/
+  #kinesiologyPicture, #codingPicture {
+    width: 611px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #kinesiologyPicture {
+    padding-bottom: 30px;
+    
+  }
+  .pictureContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   /*Skills*/
   .skills div:nth-child(1) {
     grid-column: 1/4;
@@ -622,6 +664,28 @@ input:focus, textarea:focus {
     align-items: center;
     justify-content: center;
     width: 100%;
+  }
+  /*About me pictures*/
+  #kinesiologyPicture, #codingPicture {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  #kinesiologyPicture {
+    padding-bottom: 30px;
+    
+  }
+  #kinesiologyPicture img, #codingPicture img {
+    width: 500px;
+    height: auto;
+    
+  }
+  #codingPicture {
+    flex-direction: row-reverse;
+    padding-left: 40px;
   }
   /*third page*/
   .projectsPage {
