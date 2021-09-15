@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+html {
+  background: #2e3440;
+  color: #f8f0e3;
+}
+a {
+  text-decoration: none;
+}
+
+.backgroundDifferent {
+  background: #232831;
+}
+section {
+  display: flex;
+  width: 100vw;
+  max-width: 100%;
+  line-height: 2em;
+  margin: 2em 0px;
+  padding: 1.5em 0px;
+}
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  color: #ebcb8b;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  color: #ebcb8b;
+}
+
+/*finished*/
+.finished {
+  color: #ab874b;
+  cursor: pointer;
+}
+.links:hover {
+  color: #ebcb8b;
+}

@@ -1,570 +1,755 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
-
+/*Variable*/
 :root {
-  --mainBGC: #0e0e0e;
+  --primary: #ebcb8b;
+  --secondary: #2e3440;
+  --third: #f8f0e3;
+  --fourth: #ab874b;
+  --fifth: #232831;
 }
 
+/* reset */
 * {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
-  color: #edf0f1;
-  background: var(--mainBGC);
+  margin: 0;
+  font-family: "Nanum Myeongjo";
   scroll-behavior: smooth;
-  font-family: "Montserrat", sans-serif;
+}
+html {
+  position: relative;
+  background-color: var(--secondary);
+  color: var(--third);
+  z-index: -2;
 }
 
-li,
-a,
-button {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500px;
-  font-size: 16px;
-  color: #edf0f1;
-  text-decoration: none;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
+/* base styles */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
   align-items: center;
-  padding: 30px 10%;
-  position: absolute;
-  width: 100%;
-  height: 7%;
-  top: 0px;
-  border-bottom: #824800 solid 3px;
-  z-index: 3;
-  animation: navBorder 10s linear;
 }
-
-.logo {
-  width: 0rem;
-  height: 0rem;
-  cursor: pointer;
-  background-color: var(--mainBGC);
-}
-
-.nav_links {
+.navBar li {
   list-style: none;
-  background-color: #824800;
-  animation: navButtonLinks 10s linear;
 }
-
-.nav_links li {
-  display: inline-block;
-  padding: 0px 20px;
-  background-color: var(--mainBGC);
-}
-
-@keyframes navAnimation {
-  0% {
-    color: var(--mainBGC);
-  }
-  5% {
-  }
-  25% {
-  }
-  50% {
-  }
-  85% {
-    color: var(--mainBGC);
-  }
-  100% {
-    color: white;
-  }
-}
-@keyframes navBorder {
-  0% {
-    border-bottom: var(--mainBGC) solid 3px;
-  }
-  5% {
-  }
-  25% {
-  }
-  50% {
-  }
-  85% {
-    border-bottom: var(--mainBGC) solid 3px;
-  }
-  100% {
-    border-bottom: #824800 solid 3px;
-  }
-}
-@keyframes navButtonLinks {
-  0% {
-    background-color: var(--mainBGC);
-  }
-  5% {
-  }
-  25% {
-  }
-  50% {
-  }
-  85% {
-    background-color: var(--mainBGC);
-  }
-  100% {
-    background-color: #824800;
-  }
-}
-
-.nav_links li a {
-  transition: all 0.3s ease 0s;
-  animation: navAnimation 10s linear;
-}
-
-.nav_links li a:hover {
-  color: orange;
-}
-#cta {
-  position: sticky !important;
-  top: 0;
-}
-button {
-  padding: 9px 25px;
-  background-color: #824800;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-  animation: navButtonLinks 10s linear, navAnimation 10s linear;
-}
-
-button:hover {
-  background-color: #683a00;
-}
-
-/*nav bar stuff*/
-
-/* .nav-links li {
-  display: inline-block;
-  padding: 0 20px;
-}
-
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 5%;
-  position: fixed;
-  width: 100%;
-}
-
-li,
-#cta {
-  font-weight: 500;
-  font-size: 16;
+li a {
+  color: var(--third);
   text-decoration: none;
+  transition: ease-in 0.2s;
 }
-.navButton {
-  font-weight: 500px;
-  font-size: 16px;
+li a:hover {
+  color: var(--primary);
 }
-
-
-
 a {
   text-decoration: none;
-  transition: all 0.3s ease-out;
-}
-a:hover {
-  color: blueviolet;
+  color: var(--third);
 }
 
-.logo {
-  width: 4rem;
-  height: 4rem;
-  cursor: pointer;
-  margin-right: auto;
+.nav_links_container {
+  grid-column: 3/7;
+  align-items: center;
+  justify-items: center;
+  align-items: center;
 }
 
-.logoTitle {
-  margin-right: auto;
+.nav_links_container li:nth-child(1) {
+  grid-column: 1/3;
+}
+.nav_links_container li:nth-child(2) {
+  grid-column: 4/6;
+}
+.nav_links_container li:nth-child(3) {
+  grid-column: 7/9;
 }
 
-.nav_links li a {
-  transition: all 0.3s ease 0s;
-}
-
-.nav_links li a:hover {
-  color: #0088a9;
-}
-
-button {
-  margin-left: 20px;
-  padding: 9px 25px;
-  background-color: goldenrod;
+.contactButton {
   border: none;
+
+  justify-self: center;
+  height: 3em;
+  width: 10em;
+  margin: 10px 10px;
+  grid-column: 8/9;
   border-radius: 50px;
   cursor: pointer;
-  transition: all 0.3s ease 0s;
-  color: #23272a;
+  background-color: var(--primary);
+  transition: 0.2s ease-in;
+}
+.contactButton a {
+  color: var(--secondary);
+}
+.contactButton:hover {
+  color: var(--secondary);
+  background-color: #90713f;
 }
 
-button:hover {
-  background-color: gold;
-} */
+.bold {
+  color: var(--primary);
+}
+.hiddenLinks:hover {
+  color: lightskyblue;
+}
 
-/* @media screen and (max-width: 880px) {
-  
-
-  .line {
-    width: 30px;
-    height: 3px;
-    background: white;
-    margin: 5px;
-  }
-
-  .hamburger {
-    position: fixed;
-    cursor: pointer;
-    right: 5%;
-    top: 5%;
-    transform: translate(-5%, -50%);
-    z-index: 2;
-  }
-
-  .nav-links {
-    position: fixed;
-    background: rgb(13, 26, 46);
-    height: 100vh;
-    width: 100%;
-    flex-direction: column;
-    clip-path: circle(80px at 90% -10%);
-    -webkit-clip-path: circle(80px at 90% -10%);
-    transition: all 1s ease-out;
-    pointer-events: none;
-  }
-  .nav-links.open {
-    clip-path: circle(2100px at 90% -10%);
-    -webkit-clip-path: circle(2100px at 90% -10%);
-    pointer-events: all;
-  }
-  .nav-links li {
-    opacity: 0;
-  }
-  .nav-links li a {
-    font-size: 25px;
-  }
-  .nav-links li:nth-child(1) {
-    transition: all 1.5s ease 0.2s;
-  }
-  .nav-links li:nth-child(2) {
-    transition: all 1.5s ease 0.4s;
-  }
-  .nav-links li:nth-child(3) {
-    transition: all 1.5s ease 0.6s;
-  }
-  li.fade {
-    opacity: 1;
-  }
-} */
-
-/*Main page stuff*/
-
-section {
-  display: flex;
+img {
   width: 100%;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
+  max-width: 100vw;
+  height: auto;
 }
 
-h2 {
-  font-size: 60px;
-  /* background: rgb(13, 26, 46, 0.7); */
-  padding: 8px 24px;
-  border-radius: 16px;
+/*Contact Me JS*/
+#prize,
+#buttonClicker {
   text-align: center;
 }
-@keyframes firstPageBackground {
-  0% {
-  }
-  5% {
-  }
-  25% {
-  }
-  50% {
-  }
-  75% {
-  }
-  100% {
-  }
-}
-
-/*start if page 1*/
-section:nth-child(2) {
-  font-size: 5px;
-  /* background-image: url(images/starrySky.jpg); */
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  width: 100%;
-  animation: firstPageBackground 5s linear 5s;
-}
-@keyframes firstWord {
-  0% {
-    color: var(--mainBGC);
-    bottom: 200px;
-    left: 440px;
-  }
-  5% {
-  }
-  25% {
-    color: white;
-  }
-  50% {
-    bottom: 200px;
-    left: 440px;
-  }
-  75% {
-  }
-  100% {
-    color: white;
-    bottom: 0px;
-    left: 0px;
-  }
-}
-@keyframes introSentence {
-  0% {
-    color: var(--mainBGC);
-  }
-  25% {
-  }
-  50% {
-  }
-  75% {
-    color: var(--mainBGC);
-  }
-  100% {
-    color: white;
-  }
-}
-@keyframes emphasis {
-  0% {
-    color: var(--mainBGC);
-  }
-  25% {
-  }
-  50% {
-  }
-  75% {
-    color: var(--mainBGC);
-  }
-  100% {
-    color: orange;
-  }
-}
-
-#firstWord {
-  color: var(--mainBGC);
+#buttonClicker button:nth-child(1) {
   position: relative;
-  bottom: 200px;
-  left: 440px;
-  animation: firstWord 5s ease-in-out 2s forwards;
-  z-index: 2;
-}
-#introSentence {
-  color: var(--mainBGC);
-  animation: introSentence 9.5s linear forwards;
-  position: relative;
-  z-index: 1;
-}
-.emphasis {
-  color: var(--mainBGC);
-  animation: emphasis 9.7s linear forwards;
-  position: relative;
-  z-index: 1;
-}
-
-#heroTag {
-  color: var(--mainBGC);
   cursor: pointer;
-  transition: 0.5s linear;
+  height: 2em;
+  width: 5em;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  background-color: var(--primary);
+  transition: 0.2s ease-in;
+  border: 2px solid var(--primary);
+  color: var(--secondary);
 }
-#heroTag:hover {
-  color: orange;
-  transition: 0.5s linear;
+#prize a:hover {
+  color: skyblue;
+}
+#rewardContainer {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow-x: hidden;
+  display: none;
+}
+#rewardAnimation {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  left: -100px;
 }
 
-.quotes {
-  color: var(--mainBGC);
+#counterButton {
+  display: none;
+}
+#buttonClicker {
+  display: none;
+  justify-content: center;
+  height: 40px;
+}
+#autoButton {
+  display: none;
   position: absolute;
   cursor: pointer;
-  transition: 0.5s linear;
+  height: 2em;
+  width: 8em;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  background-color: var(--primary);
+  transition: 0.2s ease-in;
+  border: 2px solid var(--primary);
+  color: var(--secondary);
+  left: 15%;
 }
 
-.quotes:hover {
-  color: #824800;
-  transition: 0.5s linear;
+/* fonts */
+@font-face {
+  font-family: "Nanum Myeongjo";
+  src: url(/Assets/Fonts/NanumMyeongjo-Regular.ttf);
 }
-#quote1 {
-  top: 240px;
-  left: 150px;
+
+/* Mobile styles */
+.navBar {
+  opacity: 0;
+  position: absolute;
+  display: none;
+  background: var(--secondary);
 }
-#quote2 {
-  top: 320px;
-  right: 250px;
+
+/*First Page*/
+@keyframes name {
+  0% {
+    transform: translate(0em, 0em);
+  }
+  25% {
+  }
+  50% {
+  }
+  75% {
+    transform: translate(1.5em, 8em);
+    opacity: 1;
+    font-size: 2em;
+  }
+  100% {
+    transform: translate(1.5em, 8em);
+    opacity: 0;
+    font-size: 2em;
+  }
 }
-#quote3 {
-  bottom: 50px;
-  right: 200px;
+.name {
+  position: absolute;
+  color: var(--primary);
+  width: 8em;
+  border-bottom: #90713f solid 2px;
+  font-size: 1em;
+  margin: 20px 20px;
+  animation: name 5s ease-in-out reverse;
+  cursor: pointer;
+  z-index: 2;
 }
-#quote4 {
-  bottom: 200px;
-  left: 100px;
-}
-#quote5 {
-  bottom: 300px;
-  right: 100px;
-}
-#quote6 {
-  top: 90px;
-  right: 100px;
-}
-/*end of page 1*/
 
 section:nth-child(3) {
-  background-color: rgb(13, 26, 46);
-  height: 15vh;
-  width: 100%;
-}
-
-section:nth-child(3) h2 {
-  font-size: 20px;
-  font-weight: 100;
-}
-
-section:nth-child(4) {
-  background-image: url(images/sillouhetteWalk.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  height: 100vh;
-  width: 100%;
-}
-
-.blur {
+  font-size: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
+  width: 100vw;
   height: 100vh;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
 }
-
-section:nth-child(5) {
-  background-color: rgb(13, 26, 46);
-  height: 15vh;
-  width: 100%;
-}
-section:nth-child(5) h2 {
-  font-size: 20px;
-  font-weight: 100;
-}
-
-section:nth-child(6) {
-  /* background-image: url(images/starrySky.jpg); */
-  background-attachment: fixed;
+#firstPageBackground {
+  position: fixed;
+  max-width: 100%;
+  width: 100vw;
+  height: 100vh;
+  background: url(/Assets/Backgrounds/heroBanner.jpg);
   background-size: cover;
-  background-position: center;
-  height: 100vh;
+  background-attachment: fixed;
+  background-position-x: center;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+@keyframes myTitles {
+  100% {
+    opacity: 1;
+  }
+}
+.myTitles {
+  position: absolute;
+  font-weight: bold;
+  opacity: 0;
+  animation: myTitles 1.5s ease-in 5s forwards;
+}
+@keyframes myTitlesFL {
+  100% {
+    color: var(--primary);
+  }
+}
+.myTitlesFL {
+  animation: myTitlesFL 2s ease-in 6s forwards;
+}
+
+#kinesiologyTitle {
+  cursor: pointer;
+}
+
+#runContainer {
+  position: relative;
   width: 100%;
+  height: 200px;
+  top: 300px;
+  overflow-x: hidden;
 }
 
-/*medium sized screens?*/
-@media screen and (max-width: 1230px) {
-  #heroTag {
-    font-size: 30px;
+#runAnimation {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: -100px;
+}
+
+/*Second Page*/
+/*About Me*/
+
+#myAge {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.aboutMePage {
+  max-width: 100%;
+  width: 100vw;
+  height: auto;
+  background-color: var(--secondary);
+  z-index: -1;
+  padding: 20px 25px;
+}
+.aboutMePage h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: var(--primary);
+}
+.aboutMePage img {
+  display: block;
+  margin: auto;
+  filter: drop-shadow(5px 5px 20px black);
+  cursor: pointer;
+}
+.aboutMePage h4 {
+  margin: 30px 0px 15px 0px;
+  color: var(--primary);
+}
+
+.aboutMePage p {
+  line-height: 1.8;
+  text-indent: 20px;
+}
+/*This is for images within the about me section*/
+#kinesiologyPicture,
+#codingPicture {
+  border: 2px solid var(--primary);
+  background-color: #232831;
+}
+#kinesiologyPicture img,
+#codingPicture img {
+  cursor: default;
+}
+#kinesiologyPicture {
+  padding: 20px 20px 0px 20px;
+}
+#codingPicture {
+  margin: 20px 0px 25px 0px;
+  padding: 20px 20px;
+}
+
+#codingPicture :nth-child(2) {
+  margin-top: 10px;
+}
+
+/*Skills*/
+.skills div:nth-child(1) {
+  grid-column: 1/9;
+}
+.skills div:nth-child(2) {
+  grid-column: 1/9;
+}
+.skills div:nth-child(3) {
+  grid-column: 1/9;
+}
+.skills div:nth-child(4) {
+  grid-column: 1/9;
+}
+.skills div:nth-child(5) {
+  grid-column: 1/9;
+}
+.skills h4 {
+  font-weight: bold;
+}
+
+.skills ul li {
+  margin-left: 30px;
+  line-height: 1.8;
+}
+
+/*Third Page*/
+.projectsPage {
+  border-top: 1.5px solid var(--fourth);
+}
+.projectsPage h3 {
+  text-align: center;
+  color: var(--primary);
+  padding-top: 20px;
+}
+.projects {
+  display: grid;
+  padding: 20px 20px;
+  gap: 25px;
+  justify-self: center;
+  align-items: center;
+}
+.projects img {
+  border: var(--fourth) solid 1.5px;
+  transition: linear 0.2s;
+}
+.projects div {
+  box-shadow: 5px 5px 20px black;
+  transition: linear 0.1s;
+  cursor: pointer;
+}
+.projects div:hover {
+  opacity: 0.5;
+}
+.projects h4 {
+  text-align: center;
+  margin: 12px 0px;
+  color: var(--primary);
+}
+.projects p {
+  position: relative;
+  text-align: center;
+  margin: 20px 20px;
+}
+.projects div:nth-child(1) {
+  grid-column: 1/9;
+  background-color: var(--secondary);
+}
+.projects div:nth-child(2) {
+  grid-column: 1/9;
+  background-color: var(--secondary);
+}
+.projects div:nth-child(3) {
+  grid-column: 1/9;
+  background-color: var(--secondary);
+}
+.projects div:nth-child(4) {
+  grid-column: 1/9;
+  background-color: var(--secondary);
+}
+/*Fourth Page*/
+#contactMeTitle {
+  cursor: pointer;
+}
+
+.contactMePage {
+  background-color: var(--secondary);
+  border-top: 1.5px solid var(--fourth);
+  border-bottom: 1.5px solid var(--fourth);
+}
+.contactMePage h3 {
+  text-align: center;
+  margin: 20px 0px;
+  color: var(--primary);
+}
+.formContainer {
+  margin: 20px 20px;
+}
+.formContainer div {
+  margin: 15px 5px;
+}
+
+.formContainer input,
+textarea,
+select {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 8px;
+  padding: 12px 10px;
+  transition: 0.2s linear;
+  border: 2px solid var(--third);
+}
+input:focus,
+textarea:focus {
+  border: 2px solid var(--fourth);
+}
+
+.formContainer input[type="text"] {
+  background-image: url(/Assets/Icons/nameIcon.jpg);
+  background-position: 3px 8px;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  padding-left: 36px;
+}
+
+.formContainer input[type="email"] {
+  background-image: url(/Assets/Icons/Email\ Icon.png);
+  background-position: 8px 14px;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  padding-left: 36px;
+}
+
+.formContainer select {
+  width: 100%;
+  background-image: url(/Assets/Icons/QuestionMarkIcon.png);
+  background-position: 13px 12px;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.formContainer textarea {
+  resize: none;
+}
+
+.submitButton {
+  text-align: center;
+}
+.formContainer input[type="submit"] {
+  position: relative;
+  padding: 10px 10px;
+  cursor: pointer;
+  height: 3em;
+  width: 10em;
+  border-radius: 50px;
+  background-color: var(--primary);
+  transition: 0.2s ease-in;
+  border: 2px solid var(--primary);
+  color: var(--secondary);
+}
+.formContainer input[type="submit"]:hover {
+  background-color: var(--fourth);
+}
+
+/*Footer*/
+.footerContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  background-color: var(--secondary);
+}
+
+.footerContainer div {
+  background-color: var(--secondary);
+  width: auto;
+  padding: 20px 15px;
+  cursor: pointer;
+  color: grey;
+}
+
+.footerContainer div:hover {
+  color: var(--third);
+}
+
+/* small tablet sizes */
+@media screen and (min-width: 600px) {
+  /*second page*/
+  #profilePicture {
+    width: 60%;
   }
-  .quotes {
-    font-size: 30px;
+  .aboutMePage {
+    font-size: 1.1em;
+    padding: 1.5em 2em;
   }
-  #quote6 {
-    position: absolute;
-    top: 140px;
+  /*third page*/
+  .projectsPage {
+    font-size: 1.1em;
+    padding-top: 5px;
+  }
+  .projects {
+    margin: 0.3em 3em;
+  }
+
+  /*fourth page*/
+  .contactMePage {
+    padding-left: 3em;
+    padding-right: 3em;
   }
 }
 
-/*Small devices Ipad*/
-@media screen and (max-width: 890px) {
-  header {
-    display: none;
-  }
-  #heroTag {
-    display: none;
-  }
-  section:nth-child(3) h2 {
-    font-size: 5px;
-    font-weight: 100;
-  }
-}
-
-/*Very small devices*/
-@media screen and (max-width: 500px) {
-  @keyframes firstWord {
-    0% {
-      color: var(--mainBGC);
-      bottom: 200px;
-      left: 150px;
-    }
-    5% {
-    }
-    25% {
-      color: white;
-    }
-    50% {
-      bottom: 200px;
-      left: 150px;
-    }
-    75% {
-    }
+/*Laptop*/
+/*first page*/
+@media screen and (min-width: 760px) {
+  @keyframes navBar {
     100% {
-      color: white;
-      bottom: 0px;
-      left: 0px;
+      opacity: 1;
     }
   }
-  #firstWord {
-    color: var(--mainBGC);
-    bottom: 200px;
-    left: 150px;
-    animation: firstWord 5s ease-in-out 2s forwards;
+  .navBar {
+    opacity: 0;
+    width: 100%;
+    border-bottom: 1.5px solid var(--fourth);
+    color: white;
+    display: grid;
+    animation: navBar 1s ease-in 5s forwards;
   }
-  #heroTag {
-    display: none;
+  #profilePicture {
+    width: 50%;
   }
-  .quotes {
-    font-size: 20px;
+
+  /*second page*/
+  .aboutMePage {
+    font-size: 1.1em;
+    padding: 1.5em 5em;
   }
-  #quote1 {
-    top: 100px;
-    left: 150px;
+  /*About me pictures*/
+  #kinesiologyPicture,
+  #codingPicture {
+    width: 611px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  #quote2 {
-    top: 150px;
-    right: 250px;
+  #kinesiologyPicture {
+    padding-bottom: 30px;
   }
-  #quote3 {
-    bottom: 50px;
-    right: 200px;
+  .pictureContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  #quote4 {
-    bottom: 200px;
-    left: 120px;
+  /*Skills*/
+  .skills div:nth-child(1) {
+    grid-column: 1/4;
+    grid-row: 1/2;
   }
-  #quote5 {
-    top: 200px;
-    right: 10px;
+  .skills div:nth-child(2) {
+    padding-top: 0px;
+    grid-column: 5/9;
+    grid-row: 1/2;
   }
-  #quote6 {
-    top: 20px;
-    right: 110px;
+  .skills div:nth-child(3) {
+    grid-column: 1/4;
   }
-  section:nth-child(3) h2 {
-    font-size: 5px;
-    font-weight: 100;
+  /*REMEMBER THIS MARGIN LOL*/
+  .skills div:nth-child(4) {
+    margin-top: 30px;
+    grid-column: 5/9;
   }
+  .skills div:nth-child(5) {
+    grid-column: 1/9;
+  }
+  .skills h4 {
+    font-weight: bold;
+  }
+
+  /*thirdPage*/
+  .projects div:nth-child(1) {
+    grid-column: 1/5;
+    background-color: var(--secondary);
+  }
+  .projects div:nth-child(2) {
+    grid-column: 5/9;
+    background-color: var(--secondary);
+  }
+  .projects div:nth-child(3) {
+    grid-column: 1/5;
+    background-color: var(--secondary);
+  }
+  .projects div:nth-child(4) {
+    grid-column: 5/9;
+    background-color: var(--secondary);
+  }
+
+  /*fourth page*/
+  .contactMePage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .formContainer {
+    width: 601px;
+  }
+}
+
+/*Desktop*/
+@media screen and (min-width: 1180px) {
+  /*second page*/
+  #profilePicture {
+    width: 500px;
+  }
+  .aboutMePage {
+    font-size: 1.3em;
+    padding: 1.5em 6em;
+  }
+  .aboutMeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  /*About me pictures*/
+  #kinesiologyPicture,
+  #codingPicture {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  #kinesiologyPicture {
+    padding-bottom: 30px;
+  }
+  #kinesiologyPicture img,
+  #codingPicture img {
+    width: 500px;
+    height: auto;
+  }
+  #codingPicture {
+    flex-direction: row-reverse;
+    padding-left: 40px;
+  }
+  /*third page*/
+  .projectsPage {
+    font-size: 1.1em;
+    padding-top: 5px;
+  }
+  /*We could have also gridded this*/
+  .projects {
+    margin: 0.3em 6em;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  .projects div {
+    width: 450px;
+    justify-content: center;
+    align-items: center;
+  }
+  .projects div:nth-child(1) {
+    grid-column: 4/5;
+    background-color: var(--secondary);
+  }
+  .projects div:nth-child(2) {
+    grid-column: 5/6;
+    background-color: var(--secondary);
+  }
+  .projects div:nth-child(3) {
+    grid-column: 4/5;
+    background-color: var(--secondary);
+  }
+  .projects div:nth-child(4) {
+    grid-column: 5/6;
+    background-color: var(--secondary);
+  }
+
+  /*fourth page*/
+  .contactMePage {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+}
+
+/*Ultra-wide*/
+@media screen and (min-width: 1500px) {
+  /*second page*/
+  .aboutMePage {
+    padding: 3em 15em;
+  }
+  .skills div:nth-child(1) {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .skills div:nth-child(2) {
+    padding-top: 0px;
+    grid-column: 4/6;
+    grid-row: 1/2;
+  }
+  .skills div:nth-child(3) {
+    grid-column: 7/9;
+  }
+  /*REMEMBER THIS MARGIN LOL*/
+  .skills div:nth-child(4) {
+    margin-top: 30px;
+    grid-column: 1/3;
+  }
+  .skills div:nth-child(5) {
+    grid-column: 4/6;
+  }
+  /*third page*/
+  .projectsPage {
+    font-size: 1.1em;
+    padding-top: 5px;
+  }
+  .projects {
+    margin: 0.3em 3em;
+  }
+
+  /*fourth page*/
+  .contactMePage {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+}
+
+/*Testing*/
+
+.divider {
+  background-color: var(--fourth);
+  height: 1.5px;
 }
