@@ -15,6 +15,25 @@ const validateForm = () => {
   }
 };
 
+const thankYouForm = (event) => {
+  let fullFormContainer = document.querySelector("#contactMe");
+  let formContainer = document.querySelector(".formContainer");
+  let contactTitle = document.querySelector("#contactMeTitle");
+  let thankParagraph = document.createElement("p");
+  formContainer.style.display = "none";
+  contactTitle.innerHTML = "Thank you for reaching out!";
+  thankParagraph.textContent = "I will get back to you as soon as I can.";
+  fullFormContainer.appendChild(thankParagraph);
+
+  fullFormContainer.style.height = "40vh";
+  fullFormContainer.style.display = "flex";
+  fullFormContainer.style.flexDirection = "column";
+  fullFormContainer.style.alignItems = "center";
+  fullFormContainer.style.justifyContent = "center";
+  fullFormContainer.style.fontSize = "1.4em";
+  console.log(thankParagraph);
+};
+
 //responsive gallery when profile picture is clicked
 const photoGallery = [
   "/Assets/PhotoGallery/drinkMug.jpg",
