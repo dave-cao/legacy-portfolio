@@ -165,7 +165,79 @@ img {
   display: none;
   background: var(--secondary);
 }
+/*Animated first Page*/
+.box div {
+  position: absolute;
+  opacity: 0;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: 6px solid rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px var(--primary);
+}
+@keyframes animate {
+  0% {
+    transform: scale(0) translateY(0) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.3) translateY(-90px) rotate(360deg);
+    opacity: 0;
+  }
+}
 
+.box div:nth-child(1) {
+  top: 3%;
+  left: 42%;
+  animation: animate 10s linear infinite 6s;
+}
+.box div:nth-child(2) {
+  top: 4%;
+  left: 70%;
+  animation: animate 7s linear infinite 6s;
+}
+.box div:nth-child(3) {
+  top: 8%;
+  left: 6%;
+  animation: animate 9s linear infinite 6s;
+}
+.box div:nth-child(4) {
+  top: 15%;
+  left: 60%;
+  animation: animate 10s linear infinite 6s;
+}
+.box div:nth-child(5) {
+  top: 14%;
+  left: 10%;
+  animation: animate 6s linear infinite 6s;
+}
+.box div:nth-child(6) {
+  top: 10%;
+  left: 70%;
+  animation: animate 12s linear infinite 6s;
+}
+.box div:nth-child(7) {
+  top: 14%;
+  left: 80%;
+  animation: animate 15s linear infinite 6s;
+}
+.box div:nth-child(8) {
+  top: 14%;
+  left: 35%;
+  animation: animate 16s linear infinite 6s;
+}
+.box div:nth-child(9) {
+  position: absolute;
+  top: 4%;
+  left: 25%;
+  animation: animate 9s linear infinite 6s;
+}
+.box div:nth-child(10) {
+  top: 7%;
+  left: 80%;
+  animation: animate 10s linear infinite 6s;
+}
 /*First Page*/
 @keyframes name {
   0% {
@@ -363,6 +435,7 @@ section:nth-child(3) {
   transition: linear 0.2s;
 }
 .projects div {
+  position: relative;
   box-shadow: 5px 5px 20px black;
   transition: linear 0.1s;
   cursor: pointer;
@@ -396,6 +469,7 @@ section:nth-child(3) {
   grid-column: 1/9;
   background-color: var(--secondary);
 }
+
 /*Fourth Page*/
 #contactMeTitle {
   cursor: pointer;
@@ -479,6 +553,58 @@ textarea:focus {
 }
 .formContainer input[type="submit"]:hover {
   background-color: var(--fourth);
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+.errorMessage {
+  display: none;
+  background-color: var(--fifth);
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px !important;
+  color: red;
+  animation: shake 0.5s;
+  animation-iteration-count: 2;
+  cursor: default;
+}
+.errorMessage:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
 }
 
 /*Footer*/
