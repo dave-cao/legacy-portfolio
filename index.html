@@ -144,7 +144,7 @@
             <div class="grid projects">
                 
                 <div><a href="https://github.com/dave-cao/Personal-Bot" target="_blank" rel="noopener noreferrer">
-                        <img src="/Assets/Thumbnails/Discord-Bot-Thumbnail.png" alt="REMEMBER TO PUT A GIF IN HERE INSTEAD">                 
+                        <img src="/Assets/Thumbnails/realDiscordVS.gif" alt="REMEMBER TO PUT A GIF IN HERE INSTEAD">                 
                         <h4>Cams Only Discord</h4>
                         <p>Using asynchronous functions to create a cams only discord voice channel (and many other functions)</p>  
                     </a>
@@ -186,8 +186,7 @@
                 <button id="autoButton" onclick="autoClicker()">Auto-Clicker!</button>
             </div>
             <div id="prize"></div>
-            
-            <form name="myForm" class="formContainer" method="POST" action="https://formsubmit.co/c486f10f72f571dbf74d62286cea006a" onsubmit="return validateForm()">
+            <form name="myForm" class="formContainer" method="POST" action="https://formsubmit.co/c486f10f72f571dbf74d62286cea006a" onsubmit="thankYouForm(event)">
                 <div>
                     <label for="fullName">Full Name</label>
                     <input type="text" id="fullName" name="user_name" placeholder="Full Name">
@@ -206,7 +205,7 @@
                     <input type="hidden" name="_captcha" value="false">
                  </div>
                 <div class="submitButton">
-                    <input type="submit" value="Submit" formtarget="" id="submitButton">
+                    <input type="submit" value="Submit" formtarget="_blank" id="submitButton" onclick="return validateForm()">
                 </div>
             </form>
         </section>
