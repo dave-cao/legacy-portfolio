@@ -1,16 +1,48 @@
 //Stop users from sending an empty form
+let errorMessageContainer = document.querySelector(".errorMessage");
+let errorMessage = document.createElement("h4");
 const validateForm = () => {
   let userName = document.forms["myForm"]["user_name"].value;
   let userEmail = document.forms["myForm"]["user_email"].value;
   let userComments = document.forms["myForm"]["user_comments"].value;
+
+  let errorIncrement = 0;
+  errorMessageContainer.style.display = "block";
+  //helper function for animation
+  const errorFunction = () => {
+    errorMessageContainer.appendChild(errorMessage);
+    errorMessageContainer.style.opacity = "0";
+    errorIncrement++;
+    let frameRate;
+    let fade = 0;
+    let position = 0;
+    clearInterval(frameRate);
+    id = setInterval(frame, 1);
+    function frame() {
+      if (fade === 1) {
+        clearInterval(frameRate);
+      } else {
+        position++;
+        errorMessageContainer.style.left = position + "px";
+        fade += 0.01;
+        errorMessageContainer.style.opacity = fade;
+      }
+    }
+  };
+
   if (userName == "") {
-    alert("Hey! I need to know your name to know what to refer you as!");
+    errorMessage.innerHTML =
+      "Please fill in your name so I know who to refer you as!";
+    errorFunction();
     return false;
   } else if (userEmail == "") {
-    alert("I need to know your email to contact you back!");
+    errorMessage.innerHTML = "I need to know your email to contact you back!";
+    errorFunction();
     return false;
   } else if (userComments == "") {
-    alert("Leave a comment so I can understand why you're contacting me! :)");
+    errorMessage.innerHTML =
+      "Leave a comment so I can understand why you're contacting me! :)";
+    errorFunction();
     return false;
   }
 };
