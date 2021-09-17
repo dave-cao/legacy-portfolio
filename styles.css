@@ -28,6 +28,12 @@ html {
   grid-template-columns: repeat(8, 1fr);
   align-items: center;
 }
+/* Mobile styles */
+/* opacity: 0;
+  position: absolute;
+  display: none;
+  background: var(--secondary); */
+
 .navBar li {
   list-style: none;
 }
@@ -44,31 +50,78 @@ a {
   color: var(--third);
 }
 
+.line {
+  width: 30px;
+  height: 3px;
+  background: white;
+  margin: 5px;
+}
+.hamburger {
+  position: fixed;
+  margin-top: 20px;
+  cursor: pointer;
+  right: 5%;
+  z-index: 4;
+}
+
+.navBar {
+  position: fixed;
+  width: 100%;
+  justify-items: center;
+  align-self: center;
+  z-index: -1;
+  transition: all 2s ease-out;
+}
+.navBar.under {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  justify-items: center;
+  align-self: center;
+  transition: all 1s ease-out;
+}
+
 .nav_links_container {
-  grid-column: 3/7;
+  /* grid-column: 3/7; */
+  position: relative;
+  z-index: -2;
+  background-color: var(--secondary);
+  height: 100vh;
+  width: 100%;
+  grid-column: 1/9;
   align-items: center;
   justify-items: center;
   align-items: center;
+  clip-path: circle(100px at 105% -15%);
+  -webkit-clip-path: circle(100px at 105% -15%);
+  transition: all 1s ease-out;
+  pointer-events: none;
+}
+.nav_links_container.open {
+  position: relative;
+  z-index: 3;
+  clip-path: circle(1250px at 90% -10%);
+  -webkit-clip-path: circle(1250px at 90% -10%);
+  pointer-events: all;
 }
 
 .nav_links_container li:nth-child(1) {
-  grid-column: 1/3;
+  grid-column: 1/9;
 }
 .nav_links_container li:nth-child(2) {
-  grid-column: 4/6;
+  grid-column: 1/9;
 }
 .nav_links_container li:nth-child(3) {
-  grid-column: 7/9;
+  grid-column: 1/9;
 }
 
 .contactButton {
   border: none;
-
+  grid-column: 1/9;
   justify-self: center;
   height: 3em;
   width: 10em;
-  margin: 10px 10px;
-  grid-column: 8/9;
+  /* margin: 10px 10px; */
   border-radius: 50px;
   cursor: pointer;
   background-color: var(--primary);
@@ -158,13 +211,6 @@ img {
   src: url(/Assets/Fonts/NanumMyeongjo-Regular.ttf);
 }
 
-/* Mobile styles */
-.navBar {
-  opacity: 0;
-  position: absolute;
-  display: none;
-  background: var(--secondary);
-}
 /*Animated first Page*/
 .box div {
   position: absolute;
@@ -270,7 +316,7 @@ img {
   z-index: 2;
 }
 
-section:nth-child(3) {
+.mainPage {
   font-size: 40px;
   display: flex;
   justify-content: center;
@@ -662,12 +708,47 @@ textarea:focus {
     }
   }
   .navBar {
+    position: absolute;
     opacity: 0;
     width: 100%;
     border-bottom: 1.5px solid var(--fourth);
     color: white;
     display: grid;
+    background-color: var(--secondary);
     animation: navBar 1s ease-in 5s forwards;
+    justify-items: center;
+    align-self: center;
+    z-index: 0;
+  }
+  .hamburger {
+    display: none;
+  }
+  .nav_links_container {
+    height: 60px;
+    grid-column: 1/9;
+    align-items: center;
+    justify-items: center;
+    align-items: center;
+    clip-path: none;
+    transition: all 1s ease-out;
+    pointer-events: all;
+  }
+  .nav_links_container.open {
+    clip-path: none;
+  }
+
+  .nav_links_container li:nth-child(1) {
+    grid-column: 3/4;
+  }
+  .nav_links_container li:nth-child(2) {
+    grid-column: 4/6;
+  }
+  .nav_links_container li:nth-child(3) {
+    grid-column: 6/7;
+  }
+
+  .contactButton {
+    grid-column: 8/9;
   }
   #profilePicture {
     width: 50%;
