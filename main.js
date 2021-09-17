@@ -68,23 +68,26 @@ const thankYouForm = (event) => {
 
 //responsive gallery when profile picture is clicked
 const photoGallery = [
-  "/Assets/PhotoGallery/drinkMug.jpg",
   "/Assets/PhotoGallery/fundraiserWithFriends.jpg",
-  "/Assets/PhotoGallery/hairCut.jpg",
-  "/Assets/PhotoGallery/raining.jpg",
-  "/Assets/PhotoGallery/skyDiving.jpg",
+  "/Assets/PhotoGallery/posingMexico.jpg",
   "/Assets/PhotoGallery/teletonRehab.jpg",
-  "/Assets/PhotoGallery/walkWithFriend.jpg",
-  "/Assets/Thumbnails/ProfilePic.jpg",
+  "/Assets/PhotoGallery/skyDiving.jpg",
   "/Assets/PhotoGallery/bigWorld.jpg",
   "/Assets/PhotoGallery/withAngels.jpg",
+  "/Assets/PhotoGallery/walkWithFriend.jpg",
+  "/Assets/PhotoGallery/raining.jpg",
   "/Assets/PhotoGallery/teddyBear.jpg",
-  "/Assets/PhotoGallery/posingMexico.jpg",
+  "/Assets/PhotoGallery/drinkMug.jpg",
+  "/Assets/Thumbnails/ProfilePic.jpg",
 ];
+let galleryIncrement = 0;
 const changeProfilePicture = () => {
-  let randomNumber = Math.floor(Math.random() * 12);
-  console.log(randomNumber);
-  document.querySelector("#profilePicture").src = photoGallery[randomNumber];
+  if (galleryIncrement === photoGallery.length) {
+    galleryIncrement = 0;
+  }
+  document.querySelector("#profilePicture").src =
+    photoGallery[galleryIncrement];
+  galleryIncrement++;
 };
 
 //naruto run when kinesiology is clicked
