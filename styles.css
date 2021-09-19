@@ -5,6 +5,7 @@
   --third: #f8f0e3;
   --fourth: #ab874b;
   --fifth: #232831;
+  --sixth: grey;
 }
 
 /* reset */
@@ -38,12 +39,12 @@ html {
   list-style: none;
 }
 li a {
-  color: var(--third);
+  color: var(--sixth);
   text-decoration: none;
   transition: ease-in 0.2s;
 }
 li a:hover {
-  color: var(--primary);
+  color: var(--third);
 }
 a {
   text-decoration: none;
@@ -667,7 +668,7 @@ textarea:focus {
   width: auto;
   padding: 20px 15px;
   cursor: pointer;
-  color: grey;
+  color: var(--sixth);
 }
 
 .footerContainer div:hover {
