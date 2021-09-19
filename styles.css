@@ -486,7 +486,9 @@ img {
   cursor: pointer;
 }
 .projects div:hover {
-  opacity: 0.5;
+  opacity: 0.7;
+  animation: shake 3s;
+  animation-iteration-count: infinite;
 }
 .projects h4 {
   text-align: center;
