@@ -412,6 +412,9 @@ const clickCounter = () => {
     case 5000:
       prizeContainer.innerHTML = "There's nothing after this, you should stop";
       break;
+    case 6000:
+      prizeContainer.innerHTML =
+        "Type 'IM A LOSER' in the comments, submit, and I'll make something special for you :)";
     case 8000:
       prizeContainer.innerHTML = "I'm serious, theres nothing after this.";
       break;
