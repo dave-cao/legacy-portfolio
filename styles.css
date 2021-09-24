@@ -236,53 +236,53 @@ img {
 .box div:nth-child(1) {
   top: 3%;
   left: 42%;
-  animation: animate 10s linear infinite 6s;
+  animation: animate 10s linear infinite 4s;
 }
 .box div:nth-child(2) {
   top: 4%;
   left: 70%;
-  animation: animate 7s linear infinite 6s;
+  animation: animate 7s linear infinite 4s;
 }
 .box div:nth-child(3) {
   top: 8%;
   left: 6%;
-  animation: animate 9s linear infinite 6s;
+  animation: animate 9s linear infinite 4s;
 }
 .box div:nth-child(4) {
   top: 15%;
   left: 60%;
-  animation: animate 10s linear infinite 6s;
+  animation: animate 10s linear infinite 4s;
 }
 .box div:nth-child(5) {
   top: 14%;
   left: 10%;
-  animation: animate 6s linear infinite 6s;
+  animation: animate 6s linear infinite 4s;
 }
 .box div:nth-child(6) {
   top: 10%;
   left: 70%;
-  animation: animate 12s linear infinite 6s;
+  animation: animate 12s linear infinite 4s;
 }
 .box div:nth-child(7) {
   top: 14%;
   left: 80%;
-  animation: animate 15s linear infinite 6s;
+  animation: animate 15s linear infinite 4s;
 }
 .box div:nth-child(8) {
   top: 14%;
   left: 35%;
-  animation: animate 16s linear infinite 6s;
+  animation: animate 16s linear infinite 4s;
 }
 .box div:nth-child(9) {
   position: absolute;
   top: 4%;
   left: 25%;
-  animation: animate 9s linear infinite 6s;
+  animation: animate 9s linear infinite 4s;
 }
 .box div:nth-child(10) {
   top: 7%;
   left: 80%;
-  animation: animate 10s linear infinite 6s;
+  animation: animate 10s linear infinite 4s;
 }
 /*First Page*/
 @keyframes name {
@@ -311,7 +311,7 @@ img {
   border-bottom: #90713f solid 2px;
   font-size: 1em;
   margin: 20px 20px;
-  animation: name 5s ease-in-out reverse;
+  animation: name 3s ease-in-out reverse;
   cursor: pointer;
   z-index: 2;
 }
@@ -347,7 +347,7 @@ img {
   position: absolute;
   font-weight: bold;
   opacity: 0;
-  animation: myTitles 1.5s ease-in 5s forwards;
+  animation: myTitles 1.5s ease-in 3s forwards;
 }
 @keyframes myTitlesFL {
   100% {
@@ -355,7 +355,7 @@ img {
   }
 }
 .myTitlesFL {
-  animation: myTitlesFL 2s ease-in 6s forwards;
+  animation: myTitlesFL 2s ease-in 4s forwards;
 }
 
 #kinesiologyTitle {
@@ -717,7 +717,7 @@ textarea:focus {
     color: white;
     display: grid;
     background-color: var(--secondary);
-    animation: navBar 1s ease-in 5s forwards;
+    animation: navBar 1s linear 3s forwards;
     justify-items: center;
     align-self: center;
     z-index: 0;
