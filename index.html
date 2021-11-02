@@ -1,248 +1,276 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>David Cao</title>
-        <meta name="description" content="David's Resume/Porfolio Website">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta property="og:title" content="David's Portfolio/Resume Website" />
-        <meta property="og:description" content="Come check it out!" />
-        <meta property="og:image" content="https://cdn.discordapp.com/attachments/883137647491575839/884897891859181578/ProfilePic.jpg" />
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        
-        <div><h1 class="name" onclick="clickMyName()">David Cao</h1></div>
-        <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>David Cao</title>
+    <meta name="description" content="David's Resume/Porfolio Website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="David's Portfolio/Resume Website" />
+    <meta property="og:description" content="Come check it out!" />
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/883137647491575839/884897891859181578/ProfilePic.jpg" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/Assets/Icons/favicon.ico" />
+</head>
+
+<body>
+
+    <div>
+        <h1 class="name" onclick="clickMyName()">David Cao</h1>
+    </div>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <nav class="navBar grid">
+        <ul class="nav_links_container grid">
+            <li class="aboutMeLink"><a href="#aboutMe">About Me</a></li>
+            <li class="myProjectsLink"><a href="#myProjects">My Projects</a></li>
+            <li><a href="/goalsPage/goals.html" target="_blank">Goals</a></li>
+            <button class="contactButton contactMeLink"><a href="#contactMe">Contact Me!</a></button>
+        </ul>
+    </nav>
+
+
+
+    <section class="mainPage">
+        <p class="myTitles">
+            <span id="kinesiologyTitle" onclick="runAnimation()"><span class="myTitlesFL">K</span>inesiologist</span>
+            <br />
+            <a href="https://youtu.be/9T2BlqpLgPY" target="_blank"><span class="myTitlesFL">C</span>oding</a>
+            <br />
+            <a href="https://youtu.be/Fdzs1dKkUHg" target="_blank"><span class="myTitlesFL hiddenLinks">A</span>dapting</a>
+            <br />
+            <a href="https://youtu.be/dvFFb65pWnU" target="_blank"><span class="myTitlesFL hiddenLinks">L</span>earning</a>
+            <br />
+            <span class="myTitlesFL">S</span>inging
+        </p>
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-        <nav class="navBar grid">
-            <ul class="nav_links_container grid">
-                <li class="aboutMeLink"><a href="#aboutMe">About Me</a></li>
-                <li class="myProjectsLink"><a href="#myProjects">My Projects</a></li>
-                <li><a href="/goalsPage/goals.html" target="_blank">Goals</a></li>
-                <button class="contactButton contactMeLink"><a href="#contactMe">Contact Me!</a></button>
-            </ul>
-        </nav>
-        
+        <div id="firstPageBackground"></div>
+        <div id="runContainer">
+            <img id="runAnimation" src="Assets/Video/narutoRun.gif"></img>
+        </div>
 
-        
-        <section class="mainPage">
-            <p class="myTitles">
-                <span id="kinesiologyTitle" onclick="runAnimation()"><span class="myTitlesFL">K</span>inesiologist</span>
-                <br />
-                <a href="https://youtu.be/9T2BlqpLgPY" target="_blank"><span class="myTitlesFL">C</span>oding</a>
-                <br />
-                <a href="https://youtu.be/Fdzs1dKkUHg" target="_blank"><span class="myTitlesFL hiddenLinks">A</span>dapting</a>
-                <br />
-                <a href="https://youtu.be/dvFFb65pWnU" target="_blank"><span class="myTitlesFL hiddenLinks">L</span>earning</a>
-                <br />
-                <span class="myTitlesFL">S</span>inging</p>
-            <div class="box">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div id="firstPageBackground"></div>
-            <div id="runContainer">
-                <img id="runAnimation" src="Assets/Video/narutoRun.gif"></img>
-            </div>
+    </section>
 
-        </section>
+    <div class="divider"></div>
+    <section id="aboutMe" class="aboutMePage">
+        <h3>About Me</h3>
+        <a href="https://www.irt.org/script/29.htm" target="_blank">
+            <h4 id="myAge" onclick="creditForDateScript()"></h4>
+        </a>
+        <div class="aboutMeContainer">
 
-        <div class="divider"></div> 
-        <section id="aboutMe" class="aboutMePage">
-            <h3>About Me</h3>
-            <a href="https://www.irt.org/script/29.htm" target="_blank"><h4 id="myAge" onclick="creditForDateScript()"></h4></a>
-            <div class="aboutMeContainer">
-                
-                <img src="/Assets/Thumbnails/ProfilePic.jpg" alt="A photo of my face" id="profilePicture" onclick="return changeProfilePicture()">
-                <div>
-                    <h4 style="text-decoration: underline;">General Info About Me</h4>
-                    <p>
-                        I am a 4th year student at the University of Alberta studying a <span class="bold">Bachelors of Science in Kinesiology</span> as well as a <span class="bold">self-taught web developer</span>. 
-                        <br>
-                        <br>
-                        I am the type of person to feel joy when helping others in their time of need. However, I am also a very practical person, and as such, I want to be able to deliver assistance in a practical form. When trying to help someone, I don’t provide emotional support. I try to help them look for solutions to their problems.</p>
-                        <br>
-                        <br>
-                      <div class="pictureContainer">
+            <img src="/Assets/Thumbnails/ProfilePic.jpg" alt="A photo of my face" id="profilePicture" onclick="return changeProfilePicture()">
+            <div>
+                <h4 style="text-decoration: underline;">General Info About Me</h4>
+                <p>
+                    I am a 4th year student at the University of Alberta studying a <span class="bold">Bachelors of Science in Kinesiology</span> as well as a <span class="bold">self-taught web developer</span>.
+                    <br>
+                    <br>
+                    I am the type of person to feel joy when helping others in their time of need. However, I am also a very practical person, and as such, I want to be able to deliver assistance in a practical form. When trying to help someone, I don’t provide emotional support. I try to help them look for solutions to their problems.
+                </p>
+                <br>
+                <br>
+                <div class="pictureContainer">
                     <div id="kinesiologyPicture">
                         <img src="Assets/Thumbnails/KinesiologyBanner.png" alt="Kinesiology Banner"></img>
                         <p>As a general health-based profession, kinesiology allows me to utilize <span class="bold">problem-solving skills, anatomy, bio-mechanics</span>, and much more to help others with their bodies and to fix issues pertaining to their health. Because at the end of the day, health is wealth right?</p>
                         <br>
                     </div>
-               
-            </div>
-                        <br>
-                        <div class="pictureContainer">
-                        <div id="codingPicture">
+
+                </div>
+                <br>
+                <div class="pictureContainer">
+                    <div id="codingPicture">
                         <img src="Assets/Thumbnails/Coding Title.png" alt="Kinesiology Banner" onclick="simpleAlert()"></img>
                         <p>Technology is the future. And what more practical way to benefit the masses than computer science? Our advance in technology allows us to continue making innovative programs and software to benefit those around us. The feeling of <span class="bold">automating programs</span> to assist us in our daily living is like no other!</p>
                     </div>
-                    </div>
-              
- 
-                      
-                        <p>These two subjects branch off into many more disciplines; with intricacies in similar but completely different ways. One boasts knowledge in bio-medical sciences whereas the other emphasizes math and problem-solving.</p> 
-                        <br>
-                        <a href="/goalsPage/goals.html" target="_blank" class="hiddenLinks"><p>There are many goals that I want to pursue. I dream big, and the skies the limit.</p></a>
                 </div>
-                <div>
-                    <h4 style="text-decoration: underline;">Skills</h4>
-                    <div class="grid skills">
-                        <div>
-                            <a href="https://youtu.be/xzStL097SlI" target="_blank"><h4 class="hiddenLinks">Kinesiology</h4></a>
-                            <ul>
-                                <li>Red Cross Emergency First Responder</li>
-                                <li class="bold">Assessing Injuries/Recommending Action</li>
-                                <li>Volunteering Abroad</li>
-                                <li>Leadership</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>Computer Science</h4>
-                            <ul>
-                                <li>Javascript</li>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <a href="https://youtu.be/3yMOAtS3u-A" target="_blank"><li class="hiddenLinks">Linux (kind of)</li></a>
-                                <li class="bold">Online Learning/Self-Teaching</li>
-                                <li>Discord</li>
-                            </ul>
 
-                        </div>
-                        
-                        <div>
-                            <h4>Language</h4>
-                            <ul>
-                                <li class="bold">English</li>
-                                <li>Vietnamese</li>
-                                <li>Spanish (Currently Learning)</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>Arts</h4>
-                            <ul>
-                                <a href="/Assets/Music/cheerSong.mp3" target="_blank"><li class="bold hiddenLinks">Singing - Choir (UAMC)</li></a>
-                                <li>Piano</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>Fitness</h4>
-                            <ul>
-                                <a href="Assets/Video/Squat_Clean.mov" target="_blank"><li class="bold hiddenLinks">Olympic Weightlifting</li></a>
-                                <a href="Assets/Video/Deadlift 200kg.mp4" target="_blank"><li class="hiddenLinks">Powerlifting</li></a>
-                            </ul>
-                        </div>
+
+
+                <p>These two subjects branch off into many more disciplines; with intricacies in similar but completely different ways. One boasts knowledge in bio-medical sciences whereas the other emphasizes math and problem-solving.</p>
+                <br>
+                <a href="/goalsPage/goals.html" target="_blank" class="hiddenLinks">
+                    <p>There are many goals that I want to pursue. I dream big, and the skies the limit.</p>
+                </a>
+            </div>
+            <div>
+                <h4 style="text-decoration: underline;">Skills</h4>
+                <div class="grid skills">
+                    <div>
+                        <a href="https://youtu.be/xzStL097SlI" target="_blank">
+                            <h4 class="hiddenLinks">Kinesiology</h4>
+                        </a>
+                        <ul>
+                            <li>Red Cross Emergency First Responder</li>
+                            <li class="bold">Assessing Injuries/Recommending Action</li>
+                            <li>Volunteering Abroad</li>
+                            <li>Leadership</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Computer Science</h4>
+                        <ul>
+                            <li>Javascript</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <a href="https://youtu.be/3yMOAtS3u-A" target="_blank">
+                                <li class="hiddenLinks">Linux (kind of)</li>
+                            </a>
+                            <li class="bold">Online Learning/Self-Teaching</li>
+                            <li>Discord</li>
+                        </ul>
+
+                    </div>
+
+                    <div>
+                        <h4>Language</h4>
+                        <ul>
+                            <li class="bold">English</li>
+                            <li>Vietnamese</li>
+                            <li>Spanish (Currently Learning)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Arts</h4>
+                        <ul>
+                            <a href="/Assets/Music/cheerSong.mp3" target="_blank">
+                                <li class="bold hiddenLinks">Singing - Choir (UAMC)</li>
+                            </a>
+                            <li>Piano</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Fitness</h4>
+                        <ul>
+                            <a href="Assets/Video/Squat_Clean.mov" target="_blank">
+                                <li class="bold hiddenLinks">Olympic Weightlifting</li>
+                            </a>
+                            <a href="Assets/Video/Deadlift 200kg.mp4" target="_blank">
+                                <li class="hiddenLinks">Powerlifting</li>
+                            </a>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-       
 
 
-        <section id="myProjects" class="projectsPage">
-            <h3>My Projects</h3>
-            <div class="grid projects">
-                
-                <div><a href="https://github.com/dave-cao/Personal-Bot" target="_blank" rel="noopener noreferrer">
-                        <img src="/Assets/Thumbnails/realDiscordVS.gif" alt="REMEMBER TO PUT A GIF IN HERE INSTEAD">                 
-                        <h4>Cams Only Discord</h4>
-                        <p>Using asynchronous functions to create a cams only discord voice channel (and many other functions)</p>  
-                    </a>
-                </div>               
-                <div>
-                    <a href="https://dave-cao.github.io/Etch-A-Sketch/" target="_blank">
+
+    <section id="myProjects" class="projectsPage">
+        <h3>My Projects</h3>
+        <div class="grid projects">
+
+            <div><a href="https://github.com/dave-cao/Personal-Bot" target="_blank" rel="noopener noreferrer">
+                    <img src="/Assets/Thumbnails/realDiscordVS.gif" alt="REMEMBER TO PUT A GIF IN HERE INSTEAD">
+                    <h4>Cams Only Discord</h4>
+                    <p>Using asynchronous functions to create a cams only discord voice channel (and many other functions)</p>
+                </a>
+            </div>
+            <div>
+                <a href="https://dave-cao.github.io/Etch-A-Sketch/" target="_blank">
                     <img src="/Assets/Thumbnails/Etch-Sketch-Thumbnail.png" alt="My Etch and Sketch Game">
                     <h4>Etch-A-Sketch</h4>
                     <p>Using arrays and loops in javascript to create an etch-a-sketch hover effect.</p>
-                    </a>
-                </div>
-                <div>
-                    <a href="https://dave-cao.github.io/Rock_Paper_Scissors/" target="_blank" rel="noopener noreferrer">
-                        <img src="/Assets/Thumbnails/Thumbnail for RPS Game.png" alt="My Rock Paper Scissors Game">
-                        <h4>Rock, Paper, Scissors</h4>
-                        <p>Using if/else statements and functions to make a simple rock, paper, scissors game</p>
-                    </a>
-                </div>
-                <div> 
-                    <a href="http://williamheng.ca/" target="_blank">
-                        <img src="/Assets/Thumbnails/WilliamPortfolio.png" alt="William's Portfoliio">
-                        <h4>Freelance Project</h4>
-                        <p>A portfolio website for a Storyboard Artist</p>
-                    </a>
-                </div>
-               
+                </a>
             </div>
-        </section>
-    
-      
-        <div id="rewardContainer">
-            <img id="rewardAnimation" src="Assets/images/sunglasses.jpg"></img>
+            <div>
+                <a href="https://dave-cao.github.io/Rock_Paper_Scissors/" target="_blank" rel="noopener noreferrer">
+                    <img src="/Assets/Thumbnails/Thumbnail for RPS Game.png" alt="My Rock Paper Scissors Game">
+                    <h4>Rock, Paper, Scissors</h4>
+                    <p>Using if/else statements and functions to make a simple rock, paper, scissors game</p>
+                </a>
+            </div>
+            <div>
+                <a href="http://williamheng.ca/" target="_blank">
+                    <img src="/Assets/Thumbnails/WilliamPortfolio.png" alt="William's Portfoliio">
+                    <h4>Freelance Project</h4>
+                    <p>A portfolio website for a Storyboard Artist</p>
+                </a>
+            </div>
+
         </div>
-        <section id="contactMe" class="contactMePage">
-           
-            <h3 id="contactMeTitle" onclick="createButton()">Contact Me!</h3>
-            <div id="buttonClicker">
-                <button id="counterButton" onclick="clickCounter()">Counter!</button>
-                <button id="autoButton" onclick="autoClicker()">Auto-Clicker!</button>
+    </section>
+
+
+    <div id="rewardContainer">
+        <img id="rewardAnimation" src="Assets/images/sunglasses.jpg"></img>
+    </div>
+    <section id="contactMe" class="contactMePage">
+
+        <h3 id="contactMeTitle" onclick="createButton()">Contact Me!</h3>
+        <div id="buttonClicker">
+            <button id="counterButton" onclick="clickCounter()">Counter!</button>
+            <button id="autoButton" onclick="autoClicker()">Auto-Clicker!</button>
+        </div>
+        <div id="prize"></div>
+        <form name="myForm" class="formContainer" method="POST" action="https://formsubmit.co/c486f10f72f571dbf74d62286cea006a" onsubmit="thankYouForm(event)">
+            <div>
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="user_name" placeholder="Full Name">
             </div>
-            <div id="prize"></div>
-            <form name="myForm" class="formContainer" method="POST" action="https://formsubmit.co/c486f10f72f571dbf74d62286cea006a" onsubmit="thankYouForm(event)">
-                <div>
-                    <label for="fullName">Full Name</label>
-                    <input type="text" id="fullName" name="user_name" placeholder="Full Name">
-                </div>
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="user_email" placeholder="Email">
-                </div>
-                <div>
-                    <label for="comments">Comments</label>
-                    <textarea name="user_comments" id="comments" cols="40" rows="5" placeholder="Feel free to leave any comments!"></textarea>
-                </div>
-                <!--Configurations-->
-                <div>
-                    <input type="hidden" name="_next" value="https://davidcao.me/thanksPage/thanksPage.html">
-                    <input type="hidden" name="_captcha" value="false">
-                 </div>
-                 <div class="errorMessage"></div>
-                <div class="submitButton">
-                    <input type="submit" value="Submit" formtarget="_blank" id="submitButton" onclick="return validateForm()">
-                </div>
-            </form>
-        </section>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="user_email" placeholder="Email">
+            </div>
+            <div>
+                <label for="comments">Comments</label>
+                <textarea name="user_comments" id="comments" cols="40" rows="5" placeholder="Feel free to leave any comments!"></textarea>
+            </div>
+            <!--Configurations-->
+            <div>
+                <input type="hidden" name="_next" value="https://davidcao.me/thanksPage/thanksPage.html">
+                <input type="hidden" name="_captcha" value="false">
+            </div>
+            <div class="errorMessage"></div>
+            <div class="submitButton">
+                <input type="submit" value="Submit" formtarget="_blank" id="submitButton" onclick="return validateForm()">
+            </div>
+        </form>
+    </section>
 
-        <footer>
-            <div class="footerContainer">
-                <a href="https://www.youtube.com/channel/UChW0GajbvBLr36d4JVFnV0A" target="_blank"><div>Youtube</div></a>
-                <a href="https://github.com/dave-cao" target="_blank"><div>Github</div></a>
-                <a href="https://www.freecodecamp.org/david-cao" target="_blank"><div>freeCodeCamp</div></a>
-            </div> 
+    <footer>
+        <div class="footerContainer">
+            <a href="https://www.youtube.com/channel/UChW0GajbvBLr36d4JVFnV0A" target="_blank">
+                <div>Youtube</div>
+            </a>
+            <a href="https://github.com/dave-cao" target="_blank">
+                <div>Github</div>
+            </a>
+            <a href="https://www.freecodecamp.org/david-cao" target="_blank">
+                <div>freeCodeCamp</div>
+            </a>
+        </div>
 
-        </footer>
-
-
-    
-      
-        
+    </footer>
 
 
 
-        
-        <script src="main.js" async defer></script>
-    </body>
+
+
+
+
+
+
+    <script src="main.js" async defer></script>
+</body>
+
 </html>
