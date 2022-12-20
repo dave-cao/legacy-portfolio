@@ -583,6 +583,21 @@ img {
   background-color: var(--secondary);
 }
 
+.more-projects-button {
+  text-align: center;
+  margin: 2rem;
+}
+.more-projects-button a {
+  background-color: var(--primary);
+  padding: 15px 15px;
+  border-radius: 50px;
+  color: black;
+}
+
+.more-projects-button a:hover {
+  background-color: var(--fourth);
+}
+
 /*Fourth Page*/
 #contactMeTitle {
   cursor: pointer;
