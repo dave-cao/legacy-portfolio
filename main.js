@@ -483,3 +483,13 @@ contactMeLink.addEventListener("click", () => {
   navLinks.classList.remove("open");
   navBar.classList.toggle("under");
 });
+
+// LOADER FUNCTION
+const loader = document.getElementById("loader");
+window.addEventListener("load", () => {
+  loader.style.height = "100%";
+  loader.style.width = "100%";
+
+  loader.style.borderRadius = "50%";
+  loader.style.visibility = "hidden";
+});
