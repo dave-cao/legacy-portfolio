@@ -490,6 +490,27 @@ window.addEventListener("load", () => {
   loader.style.height = "100%";
   loader.style.width = "100%";
 
-  loader.style.borderRadius = "50%";
-  loader.style.visibility = "hidden";
+  // loader.style.borderRadius = "50%";
+  loader.style.opacity = "1";
+
+  let fadeEffect = setInterval(() => {
+    if (loader.style.opacity < 0) {
+      clearInterval(fadeEffect);
+      loader.style.display = "none";
+
+      if (document.createStyleSheet) {
+        document.createStyleSheet("./animation.css");
+      } else {
+        var styles = "./animation.css";
+        var newSS = document.createElement("link");
+        newSS.rel = "stylesheet";
+        newSS.href = styles;
+        document.getElementsByTagName("head")[0].appendChild(newSS);
+      }
+    } else {
+      loader.style.opacity -= 0.01;
+      // loader.style.left = pos + "%";
+      // pos++;
+    }
+  }, 1);
 });

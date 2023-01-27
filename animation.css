@@ -72,7 +72,7 @@
   animation: animate 10s linear infinite 4s;
 }
 
-/*First Page*/
+/*First Page Name animation*/
 @keyframes name {
   0% {
     transform: translate(33vw, 40vh);
@@ -102,4 +102,38 @@
 
 .name {
   animation: name 3s ease-in-out forwards;
+}
+
+/* Titles */
+
+@keyframes myTitles {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes myTitlesFL {
+  100% {
+    color: var(--primary);
+  }
+}
+
+.myTitles {
+  animation: myTitles 1.5s ease-in 3s forwards;
+}
+
+.myTitlesFL {
+  animation: myTitlesFL 2s ease-in 4s forwards;
+}
+
+/* NAV BAR */
+@media screen and (min-width: 760px) {
+  @keyframes navBar {
+    100% {
+      opacity: 1;
+    }
+  }
+  .navBar {
+    animation: navBar 1s linear 3s forwards;
+  }
 }
