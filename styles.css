@@ -989,33 +989,3 @@ textarea:focus {
   background-color: var(--fourth);
   height: 1.5px;
 }
-
-/* LOADER */
-#loader {
-  height: 100vh;
-  width: 100%;
-  background-color: #0d1317;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 999;
-}
-
-#loader img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 10rem;
-  height: auto;
-}
-
-#loader h1 {
-  position: absolute;
-  top: 38%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: auto;
-  height: auto;
-}
