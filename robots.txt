@@ -1,3 +1,6 @@
+User-agent: *
+Disallow: /
+
 Buddy...why are you scraping my site man. Not cool 0-0
 
 On that note, if you are scraping me, contact me instead!
