@@ -538,20 +538,16 @@ const page = document
 
     const secretCode = secretString.split(",");
 
-    console.log(keystrokes);
     let keyChecker = 0;
     keystrokes.forEach((key, i) => {
       if (key === secretCode[i]) {
         keyChecker += 1;
       }
     });
-    console.log(keyChecker);
 
     if (keyChecker === secretCode.length) {
-      alert(
-        "I can't believe you actually entered the secret code....alright I guess I'll tell you the easter egg. I want you to click on 'Contact Me!' title near the form."
-      );
-      keystrokes = [];
+      alert("Alright you got me...here's your easter egg...");
+      window.location.href = "https://youtu.be/dQw4w9WgXcQ";
     }
 
     lastKeyTime = currentTime;
