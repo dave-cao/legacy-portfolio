@@ -514,3 +514,45 @@ window.addEventListener("load", () => {
     }
   }, 1);
 });
+
+// GAMER KEYSTROKES
+
+let keystrokes = [];
+let lastKeyTime = 9999999999;
+const page = document
+  .querySelector("html")
+  .addEventListener("keydown", function (event) {
+    // Get key and put into array
+    let key = event.key.toLowerCase();
+
+    // Reset time between keystrokes
+    let currentTime = new Date();
+    if (currentTime - lastKeyTime > 3000) {
+      keystrokes = [];
+    }
+    keystrokes.push(key);
+
+    // Check keystrokes to secret code
+    const secretString =
+      "arrowleft,arrowleft,arrowright,arrowright,arrowup,arrowdown,arrowup,arrowdown,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ";
+
+    const secretCode = secretString.split(",");
+
+    console.log(keystrokes);
+    let keyChecker = 0;
+    keystrokes.forEach((key, i) => {
+      if (key === secretCode[i]) {
+        keyChecker += 1;
+      }
+    });
+    console.log(keyChecker);
+
+    if (keyChecker === secretCode.length) {
+      alert(
+        "I can't believe you actually entered the secret code....alright I guess I'll tell you the easter egg. I want you to click on 'Contact Me!' title near the form."
+      );
+      keystrokes = [];
+    }
+
+    lastKeyTime = currentTime;
+  });

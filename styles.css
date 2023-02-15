@@ -989,3 +989,52 @@ textarea:focus {
   background-color: var(--fourth);
   height: 1.5px;
 }
+
+/* GENERAL */
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.tool {
+  position: relative;
+}
+
+.tool .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: #1d3045;
+  color: #eeeeee;
+  text-align: center;
+  border-radius: 6px;
+  padding: 15px;
+  position: absolute;
+  z-index: 1;
+  bottom: 110%;
+  left: 10%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tool .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tool:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
