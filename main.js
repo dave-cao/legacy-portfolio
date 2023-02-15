@@ -533,9 +533,12 @@ const page = document
     keystrokes.push(key);
 
     // Check keystrokes to secret code
-    const secretString =
-      "arrowleft,arrowleft,arrowright,arrowright,arrowup,arrowdown,arrowup,arrowdown,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ";
+    //     const secretString =
+    //       "arrowleft,arrowleft,arrowright,arrowright,arrowup,arrowdown,arrowup,arrowdown,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ";
+    //
 
+    const secretString =
+      "arrowleft,arrowleft,arrowright,arrowright,arrowup,arrowdown,arrowup,arrowdown";
     const secretCode = secretString.split(",");
 
     let keyChecker = 0;
