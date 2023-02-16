@@ -1,4 +1,4 @@
-import Typed from "./node_modules/typed.js/src/typed.js";
+import Typed from "./src/typed.js";
 /**
  * Template Name: iPortfolio - v3.10.0
  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
