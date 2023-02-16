@@ -97,6 +97,7 @@
   100% {
     transform: translate(0em, 0em);
     opacity: 1;
+    position: fixed;
   }
 }
 
