@@ -246,10 +246,10 @@ img {
 
 .name {
   position: absolute;
+  text-align: center;
   color: var(--primary);
-  width: 6em;
-  border-bottom: var(--fourth) solid 2px;
-  font-size: 1em;
+  width: 7em;
+  font-size: 0.9em;
   margin: 20px 20px;
   cursor: pointer;
   z-index: 2;
