@@ -1,5 +1,7 @@
 # David's Portfolio
 
+**Note**: This is my outdated portfolio website, check out https://davidcao.xyz for my updated website!
+
 **Everything in this portfolio was made in plain HTML, CSS, and JS**
 
 This is a restarted project in which I realized my old portfolio just wasn't cutting it.
