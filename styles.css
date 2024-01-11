@@ -1,7 +1,8 @@
 /*Variable*/
 :root {
   --primary: #ebcb8b;
-  --secondary: #0d1317; /*#11212a*/
+  --secondary: #0d1317;
+  /*#11212a*/
   --third: #f8f0e3;
   --fourth: #ab874b;
   --fifth: #0d1317;
@@ -227,7 +228,7 @@ img {
 /* fonts */
 @font-face {
   font-family: "Nanum Myeongjo";
-  src: url(/Assets/Fonts/NanumMyeongjo-Regular.ttf);
+  src: url(./Assets/Fonts/NanumMyeongjo-Regular.ttf);
 }
 
 /*Animated first Page*/
@@ -271,7 +272,7 @@ img {
   max-width: 100%;
   width: 100vw;
   height: 100vh;
-  background: url(/Assets/Backgrounds/astro.jpg);
+  background: url(./Assets/Backgrounds/astro.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position-x: center;
@@ -472,6 +473,7 @@ img {
   text-align: center;
   margin: 2rem;
 }
+
 .more-projects-button a {
   background-color: var(--primary);
   padding: 15px 15px;
@@ -525,7 +527,7 @@ textarea:focus {
 }
 
 .formContainer input[type="text"] {
-  background-image: url(/Assets/Icons/nameIcon.jpg);
+  background-image: url(./Assets/Icons/nameIcon.jpg);
   background-position: 3px 8px;
   background-repeat: no-repeat;
   background-size: 30px;
@@ -533,7 +535,7 @@ textarea:focus {
 }
 
 .formContainer input[type="email"] {
-  background-image: url(/Assets/Icons/Email\ Icon.png);
+  background-image: url(./Assets/Icons/Email\ Icon.png);
   background-position: 8px 14px;
   background-repeat: no-repeat;
   background-size: 20px;
@@ -542,7 +544,7 @@ textarea:focus {
 
 .formContainer select {
   width: 100%;
-  background-image: url(/Assets/Icons/QuestionMarkIcon.png);
+  background-image: url(./Assets/Icons/QuestionMarkIcon.png);
   background-position: 13px 12px;
   background-repeat: no-repeat;
   background-size: 12px;
@@ -661,6 +663,7 @@ textarea:focus {
 
 /* small tablet sizes */
 @media screen and (min-width: 600px) {
+
   /*second page*/
   #profilePicture {
     width: 60%;
@@ -843,6 +846,7 @@ textarea:focus {
 
 /*Desktop*/
 @media screen and (min-width: 1180px) {
+
   /*second page*/
   #profilePicture {
     width: 500px;
@@ -936,6 +940,7 @@ textarea:focus {
 
 /*Ultra-wide*/
 @media screen and (min-width: 1500px) {
+
   /*second page*/
   .aboutMePage {
     padding: 3em 15em;
@@ -993,12 +998,18 @@ textarea:focus {
 /* GENERAL */
 
 .no-select {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
