@@ -9,8 +9,6 @@ I also took a year break from learning how to code because of school which had n
 
 At this point I forgot a lot of things about HTML and CSS. Therefore, during the summer, I decided to revamp my website while also refreshing my knowledge on coding.
 
-**Check out my portfolio at: https://davidcao.xyz**
-
 ![A screen shot of my website](screenshots/website_example.png)
 
 ---
